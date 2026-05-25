@@ -31,15 +31,27 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-brand grid place-items-center shadow-glow">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <div className="text-sm font-bold text-white">NAILO 2026-27</div>
-                <div className="text-[11px] text-white/60">
+            <div className="flex items-start gap-4">
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <img 
+                    src="/NAILO_LOGO.png" 
+                    alt="NAILO" 
+                    className="h-10 w-auto"
+                  />
+                </div>
+                <div className="text-sm font-bold text-white mt-2">NAILO 2026-27</div>
+                <div className="text-[11px] text-white/60 mt-0.5">
                   National AI Literacy Olympiad
                 </div>
+              </div>
+              <div className="text-right">
+                <div className="text-xs text-white/60 mb-2">Organized by</div>
+                <img 
+                  src="/AFI_EDUTECH_LOGO.jpg" 
+                  alt="AFI EduTech" 
+                  className="h-8 w-auto ml-auto"
+                />
               </div>
             </div>
             <p className="mt-5 text-sm text-white/70 max-w-sm">
@@ -50,7 +62,12 @@ export function Footer() {
 
             <ul className="mt-6 space-y-2.5 text-sm">
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-white/60" /> contact@nailo.org.in
+                <Mail className="w-4 h-4 text-white/60" />
+                <a href="mailto:contact@nailo.org.in" className="hover:text-white transition-colors">contact@nailo.org.in</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-white/60" />
+                <a href="mailto:support@nailolympiad.com" className="hover:text-white transition-colors">support@nailolympiad.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-white/60" /> +91 80000 12345

@@ -42,7 +42,7 @@ export function FAQ() {
               Answers to the <span className="text-gradient">big questions</span>
             </>
           }
-          description="If something isn't here, our team is one message away."
+          description="If something isn't here, reach out to our support team at support@nailolympiad.com — we're here to help!"
         />
 
         <div className="mt-12 max-w-3xl mx-auto space-y-3">

@@ -33,12 +33,22 @@ export function Navbar() {
     >
       <nav className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-brand grid place-items-center shadow-glow">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          <div className="leading-tight">
+          <img 
+            src="/NAILO_LOGO.png" 
+            alt="NAILO" 
+            className="h-8 w-auto"
+          />
+          <div className="hidden sm:flex flex-col items-start leading-tight">
             <div className="text-sm font-bold tracking-tight">NAILO</div>
             <div className="text-[10px] text-muted-foreground -mt-0.5">2026-27</div>
+          </div>
+          <div className="hidden lg:inline-flex items-center gap-2 ml-4 pl-4 border-l border-border">
+            <span className="text-xs text-muted-foreground font-medium">by</span>
+            <img 
+              src="/AFI_EDUTECH_LOGO.jpg" 
+              alt="AFI EduTech" 
+              className="h-6 w-auto"
+            />
           </div>
         </a>
 
