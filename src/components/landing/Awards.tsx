@@ -1,7 +1,46 @@
-import { Trophy, Medal, Star, Award } from "lucide-react";
+import { Trophy, Medal, Star, Award, Crown } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
 
 export function Awards() {
+  const juniorPrizes = [
+    { rank: "National Topper (Rank 1)", prize: "₹31,000", awards: "National Winner's Trophy + Gold Medal" },
+    { rank: "Rank 2", prize: "₹21,000", awards: "Silver Medal" },
+    { rank: "Rank 3", prize: "₹11,000", awards: "Bronze Medal" },
+    { rank: "Rank 4-10", prize: "₹3,100", awards: "Merit & Appreciation Certificate" },
+    { rank: "Top 10%", prize: "—", awards: "Merit & Appreciation Certificates" },
+  ];
+
+  const seniorPrizes = [
+    { rank: "National Topper (Rank 1)", prize: "₹1,00,000", awards: "National Winner's Trophy + Gold Medal" },
+    { rank: "Rank 2", prize: "₹51,000", awards: "Silver Medal" },
+    { rank: "Rank 3", prize: "₹31,000", awards: "Bronze Medal" },
+    { rank: "Rank 4-10", prize: "₹5,100", awards: "Merit & Appreciation Certificate" },
+    { rank: "Top 10%", prize: "—", awards: "Merit & Appreciation Certificates" },
+  ];
+
+  const prestigeAwards = [
+    {
+      title: "National Olympiad Excellence School Award",
+      description: "Based on medals, scores, and overall student achievement"
+    },
+    {
+      title: "Best School Participation Award",
+      description: "Schools demonstrating exceptional participation and contribution toward AI literacy initiatives"
+    },
+    {
+      title: "Outstanding Academic Excellence Award",
+      description: "Consistent student achievement across multiple grades"
+    },
+    {
+      title: "Visionary Principal Award",
+      description: "For school heads who actively support Olympiad culture"
+    },
+    {
+      title: "Outstanding Institutional Coordinator Award",
+      description: "For exceptional coordination and leadership in Olympiad participation"
+    },
+  ];
+
   return (
     <section id="awards" className="relative py-20 lg:py-28 overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -19,81 +58,103 @@ export function Awards() {
           description="Cash prizes, medals, certificates and a moment of national recognition that stays for life."
         />
 
-        {/* Grand prize hero */}
+        {/* Junior Division */}
         <Reveal delay={0.1}>
-          <div className="mt-14 relative rounded-3xl overflow-hidden bg-gradient-brand text-white p-8 sm:p-12 shadow-glow">
-            <div className="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/15 blur-3xl" />
-            <div className="absolute -bottom-24 -left-10 w-72 h-72 rounded-full bg-white/10 blur-3xl" />
-            <div className="relative grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur text-xs font-semibold">
-                  <Trophy className="w-3.5 h-3.5" /> Grand Prize
-                </div>
-                <div className="mt-4 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-                  ₹1,00,000
-                </div>
-                <p className="mt-3 text-white/85 max-w-md">
-                  Awarded to the National Topper across both divisions, along
-                  with a featured profile and stage recognition at the NAILO
-                  Awards Ceremony.
-                </p>
-              </div>
-              <div className="relative h-64">
-                <div className="absolute inset-0 grid place-items-center">
-                  <div className="relative w-56 h-56 animate-float">
-                    <div className="absolute inset-0 rounded-full bg-white/15 blur-2xl" />
-                    <div className="relative w-full h-full rounded-3xl glass-strong grid place-items-center">
-                      <Trophy className="w-28 h-28 text-white drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)]" />
-                    </div>
-                  </div>
-                </div>
+          <div className="mt-14">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-sm font-semibold text-blue-900 mb-6">
+              <Medal className="w-4 h-4" /> Junior Division (Classes VI-VIII)
+            </div>
+            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-8">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b-2 border-blue-300">
+                      <th className="text-left py-3 px-4 font-bold text-blue-900">Position</th>
+                      <th className="text-left py-3 px-4 font-bold text-blue-900">Cash Prize</th>
+                      <th className="text-left py-3 px-4 font-bold text-blue-900">Awards</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {juniorPrizes.map((prize, i) => (
+                      <tr key={i} className="border-b border-blue-200 hover:bg-blue-50/50 transition-colors">
+                        <td className="py-3 px-4 font-semibold text-blue-900">{prize.rank}</td>
+                        <td className="py-3 px-4 font-bold text-lg text-blue-700">{prize.prize}</td>
+                        <td className="py-3 px-4 text-blue-800">{prize.awards}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </Reveal>
 
-        {/* Medals */}
-        <div className="mt-8 grid sm:grid-cols-3 gap-5">
-          {[
-            { icon: Medal, name: "Gold Medal", tier: "Top 1%", color: "from-yellow-400 to-amber-500" },
-            { icon: Medal, name: "Silver Medal", tier: "Top 3%", color: "from-slate-300 to-slate-500" },
-            { icon: Medal, name: "Bronze Medal", tier: "Top 5%", color: "from-orange-400 to-amber-700" },
-          ].map((m, i) => (
-            <Reveal key={m.name} delay={i * 0.08}>
-              <div className="relative h-full rounded-3xl bg-white border border-border p-7 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all overflow-hidden text-center">
-                <div className={`absolute -top-16 left-1/2 -translate-x-1/2 w-44 h-44 rounded-full bg-gradient-to-br ${m.color} opacity-20 blur-2xl`} />
-                <div className="relative">
-                  <div className={`mx-auto w-20 h-20 rounded-full bg-gradient-to-br ${m.color} grid place-items-center shadow-glow animate-float-slow`}>
-                    <m.icon className="w-10 h-10 text-white drop-shadow" />
-                  </div>
-                  <div className="mt-5 text-xl font-bold">{m.name}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">
-                    {m.tier} performers
-                  </div>
-                </div>
+        {/* Senior Division */}
+        <Reveal delay={0.15}>
+          <div className="mt-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-sm font-semibold text-emerald-900 mb-6">
+              <Trophy className="w-4 h-4" /> Senior Division (Classes IX-XII)
+            </div>
+            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 p-8">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b-2 border-emerald-300">
+                      <th className="text-left py-3 px-4 font-bold text-emerald-900">Position</th>
+                      <th className="text-left py-3 px-4 font-bold text-emerald-900">Cash Prize</th>
+                      <th className="text-left py-3 px-4 font-bold text-emerald-900">Awards</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {seniorPrizes.map((prize, i) => (
+                      <tr key={i} className="border-b border-emerald-200 hover:bg-emerald-50/50 transition-colors">
+                        <td className="py-3 px-4 font-semibold text-emerald-900">{prize.rank}</td>
+                        <td className="py-3 px-4 font-bold text-lg text-emerald-700">{prize.prize}</td>
+                        <td className="py-3 px-4 text-emerald-800">{prize.awards}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            </Reveal>
-          ))}
-        </div>
+            </div>
+          </div>
+        </Reveal>
 
-        <div className="mt-6 grid sm:grid-cols-2 gap-5">
-          {[
-            { icon: Star, t: "National Recognition", d: "Featured on the NAILO Wall of Fame with a verified digital profile." },
-            { icon: Award, t: "Participation Certificate", d: "Every student receives a digital certificate of participation." },
-          ].map((x) => (
-            <Reveal key={x.t}>
-              <div className="h-full rounded-2xl bg-white border border-border p-6 shadow-soft flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-brand grid place-items-center shadow-soft shrink-0">
-                  <x.icon className="w-6 h-6 text-white" />
+        {/* Digital Certificate */}
+        <Reveal delay={0.2}>
+          <div className="mt-8 rounded-2xl bg-white border border-border p-6 shadow-soft flex items-start gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-brand grid place-items-center shadow-soft shrink-0">
+              <Award className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <div className="font-bold text-lg">All Participants</div>
+              <p className="text-sm text-muted-foreground mt-1">Digital Certificate of Participation</p>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Prestige Awards */}
+        <Reveal delay={0.25}>
+          <div className="mt-14">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-200 text-sm font-semibold text-purple-900 mb-6">
+              <Crown className="w-4 h-4" /> Prestige Award Categories
+            </div>
+            <div className="grid md:grid-cols-2 gap-5">
+              {prestigeAwards.map((award, i) => (
+                <div key={i} className="relative h-full rounded-3xl bg-white border border-border p-6 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all overflow-hidden">
+                  <div className="absolute -top-12 right-0 w-32 h-32 rounded-full bg-purple-100 opacity-30 blur-2xl" />
+                  <div className="relative">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 grid place-items-center shadow-soft mb-4">
+                      <Star className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="font-bold text-base leading-tight">{award.title}</div>
+                    <p className="text-sm text-muted-foreground mt-2">{award.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-bold">{x.t}</div>
-                  <p className="text-sm text-muted-foreground mt-1">{x.d}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+              ))}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
