@@ -44,37 +44,46 @@ const items = [
 ];
 
 export function WhyParticipate() {
+  const colors = [
+    { bg: "bg-blue-50", border: "border-blue-300", icon: "from-blue-500 to-blue-600" },
+    { bg: "bg-green-50", border: "border-green-300", icon: "from-green-500 to-green-600" },
+    { bg: "bg-purple-50", border: "border-purple-300", icon: "from-purple-500 to-purple-600" },
+    { bg: "bg-yellow-50", border: "border-yellow-300", icon: "from-yellow-500 to-yellow-600" },
+    { bg: "bg-pink-50", border: "border-pink-300", icon: "from-pink-500 to-pink-600" },
+    { bg: "bg-indigo-50", border: "border-indigo-300", icon: "from-indigo-500 to-indigo-600" },
+  ];
+
   return (
-    <section className="relative py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section className="relative py-20 lg:py-32 px-5 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Why participate"
           title={
             <>
               Six reasons NAILO is{" "}
-              <span className="text-gradient">unmissable</span>
+              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">unmissable</span>
             </>
           }
           description="A single Olympiad that recognises talent, builds skill and shapes the way young Indians think about AI."
         />
 
-        <div className="mt-14 grid lg:grid-cols-3 gap-4 sm:gap-5">
-          {items.map((it, i) => (
-            <Reveal key={it.title} delay={i * 0.05} className={it.span ?? ""}>
-              <div className="group relative h-full gradient-border p-6 lg:p-7 hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
-                <div className="absolute -top-px -right-px w-28 h-28 bg-gradient-soft rounded-bl-[80px] rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-brand grid place-items-center shadow-soft group-hover:shadow-glow transition-shadow">
-                    <it.icon className="w-6 h-6 text-white" />
+        <div className="mt-16 grid lg:grid-cols-3 gap-5 lg:gap-6">
+          {items.map((it, i) => {
+            const col = colors[i];
+            return (
+              <Reveal key={it.title} delay={i * 0.05}>
+                <div className={`group relative h-full rounded-3xl border-2 p-8 lg:p-9 ${col.bg} ${col.border} hover:shadow-lg hover:-translate-y-2 transition-all ${it.span ?? ""}`}>
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${col.icon} grid place-items-center shadow-lg mb-5 group-hover:scale-110 transition-transform`}>
+                    <it.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="mt-5 text-lg font-bold">{it.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3">{it.title}</h3>
+                  <p className="text-base text-foreground/80 leading-relaxed font-medium">
                     {it.desc}
                   </p>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

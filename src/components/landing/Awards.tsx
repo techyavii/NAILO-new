@@ -92,25 +92,25 @@ export function Awards() {
         {/* Senior Division */}
         <Reveal delay={0.15}>
           <div className="mt-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-sm font-semibold text-emerald-900 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 text-sm font-semibold text-green-900 mb-6">
               <Trophy className="w-4 h-4" /> Senior Division (Classes IX-XII)
             </div>
-            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 p-8">
+            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-green-50 to-green-100 border border-green-200 p-8">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="border-b-2 border-emerald-300">
-                      <th className="text-left py-3 px-4 font-bold text-emerald-900">Position</th>
-                      <th className="text-left py-3 px-4 font-bold text-emerald-900">Cash Prize</th>
-                      <th className="text-left py-3 px-4 font-bold text-emerald-900">Awards</th>
+                    <tr className="border-b-2 border-green-300">
+                      <th className="text-left py-3 px-4 font-bold text-green-900">Position</th>
+                      <th className="text-left py-3 px-4 font-bold text-green-900">Cash Prize</th>
+                      <th className="text-left py-3 px-4 font-bold text-green-900">Awards</th>
                     </tr>
                   </thead>
                   <tbody>
                     {seniorPrizes.map((prize, i) => (
-                      <tr key={i} className="border-b border-emerald-200 hover:bg-emerald-50/50 transition-colors">
-                        <td className="py-3 px-4 font-semibold text-emerald-900">{prize.rank}</td>
-                        <td className="py-3 px-4 font-bold text-lg text-emerald-700">{prize.prize}</td>
-                        <td className="py-3 px-4 text-emerald-800">{prize.awards}</td>
+                      <tr key={i} className="border-b border-green-200 hover:bg-green-50/50 transition-colors">
+                        <td className="py-3 px-4 font-semibold text-green-900">{prize.rank}</td>
+                        <td className="py-3 px-4 font-bold text-lg text-green-700">{prize.prize}</td>
+                        <td className="py-3 px-4 text-green-800">{prize.awards}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -136,15 +136,15 @@ export function Awards() {
         {/* Prestige Awards */}
         <Reveal delay={0.25}>
           <div className="mt-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-200 text-sm font-semibold text-purple-900 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-sm font-semibold text-blue-900 mb-6">
               <Crown className="w-4 h-4" /> Prestige Award Categories
             </div>
             <div className="grid md:grid-cols-2 gap-5">
               {prestigeAwards.map((award, i) => (
                 <div key={i} className="relative h-full rounded-3xl bg-white border border-border p-6 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all overflow-hidden">
-                  <div className="absolute -top-12 right-0 w-32 h-32 rounded-full bg-purple-100 opacity-30 blur-2xl" />
+                  <div className="absolute -top-12 right-0 w-32 h-32 rounded-full bg-green-100 opacity-30 blur-2xl" />
                   <div className="relative">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 grid place-items-center shadow-soft mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-green-600 grid place-items-center shadow-soft mb-4">
                       <Star className="w-5 h-5 text-white" />
                     </div>
                     <div className="font-bold text-base leading-tight">{award.title}</div>

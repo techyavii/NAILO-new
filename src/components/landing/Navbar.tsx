@@ -57,10 +57,10 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="relative px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors group"
+                className="relative px-4 py-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors group"
               >
                 {l.label}
-                <span className="absolute left-3 right-3 -bottom-0.5 h-0.5 bg-gradient-brand scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-full" />
+                <span className="absolute left-4 right-4 -bottom-0.5 h-1 bg-gradient-to-r from-blue-500 to-green-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-full" />
               </a>
             </li>
           ))}
@@ -69,9 +69,9 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="#register"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-brand text-white text-sm font-semibold shadow-glow hover:scale-[1.03] active:scale-[0.98] transition-transform"
+            className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all"
           >
-            Register Now
+            🚀 Register Now
           </a>
         </div>
 

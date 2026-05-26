@@ -18,40 +18,51 @@ const steps = [
 ];
 
 export function ExamStructure() {
+  const stepColors = [
+    { bg: "bg-blue-50", border: "border-blue-300", icon: "from-blue-500 to-blue-600" },
+    { bg: "bg-green-50", border: "border-green-300", icon: "from-green-500 to-green-600" },
+    { bg: "bg-purple-50", border: "border-purple-300", icon: "from-purple-500 to-purple-600" },
+    { bg: "bg-yellow-50", border: "border-yellow-300", icon: "from-yellow-500 to-yellow-600" },
+    { bg: "bg-pink-50", border: "border-pink-300", icon: "from-pink-500 to-pink-600" },
+    { bg: "bg-indigo-50", border: "border-indigo-300", icon: "from-indigo-500 to-indigo-600" },
+  ];
+
   return (
-    <section id="exam" className="relative py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="exam" className="relative py-20 lg:py-32 px-5 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Examination structure"
           title={
             <>
-              From sign-up to <span className="text-gradient">stage</span> — every step.
+              From sign-up to <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">stage</span> — every step.
             </>
           }
           description="A transparent six-stage journey designed for clarity, fairness and a memorable finale."
         />
 
         <div className="mt-16 relative">
-          <div className="hidden lg:block absolute top-10 left-[8%] right-[8%] h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-5">
-            {steps.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.08}>
-                <div className="relative h-full rounded-2xl bg-white border border-border p-5 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-brand grid place-items-center shadow-glow mb-4 mx-auto">
-                    <s.icon className="w-6 h-6 text-white" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-5 lg:gap-6">
+            {steps.map((s, i) => {
+              const col = stepColors[i % stepColors.length];
+              return (
+                <Reveal key={s.title} delay={i * 0.08}>
+                  <div className={`relative h-full rounded-3xl border-2 p-7 ${col.bg} ${col.border} hover:shadow-lg hover:-translate-y-2 transition-all`}>
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${col.icon} grid place-items-center shadow-lg mb-5 mx-auto`}>
+                      <s.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-sm font-bold tracking-widest text-foreground/70 text-center uppercase mb-2">
+                      Step {String(i + 1).padStart(2, '0')}
+                    </div>
+                    <div className="text-xl font-bold text-center text-foreground mb-3">
+                      {s.title}
+                    </div>
+                    <p className="text-sm text-foreground/80 text-center leading-relaxed font-medium">
+                      {s.desc}
+                    </p>
                   </div>
-                  <div className="text-[10px] font-semibold tracking-widest text-primary text-center">
-                    STEP 0{i + 1}
-                  </div>
-                  <div className="mt-1 text-base font-bold text-center">
-                    {s.title}
-                  </div>
-                  <p className="mt-2 text-xs text-muted-foreground text-center leading-relaxed">
-                    {s.desc}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </div>

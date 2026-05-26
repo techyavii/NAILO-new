@@ -32,67 +32,77 @@ const stats = [
 ];
 
 export function About() {
+  const colors = [
+    { bg: "bg-blue-50", border: "border-blue-300", icon: "from-blue-500 to-blue-600" },
+    { bg: "bg-green-50", border: "border-green-300", icon: "from-green-500 to-green-600" },
+    { bg: "bg-purple-50", border: "border-purple-300", icon: "from-purple-500 to-purple-600" },
+    { bg: "bg-yellow-50", border: "border-yellow-300", icon: "from-yellow-500 to-yellow-600" },
+  ];
+
   return (
-    <section id="about" className="relative py-20 lg:py-28 overflow-hidden">
-      <div className="blob w-[420px] h-[420px] -top-20 right-0 bg-indigo-200/40" />
-      <div className="mx-auto max-w-7xl px-5 lg:px-8 relative">
+    <section id="about" className="relative py-20 lg:py-32 px-5 lg:px-8 overflow-hidden">
+      <div className="blob w-[420px] h-[420px] -top-20 right-0 bg-blue-200/40" />
+      <div className="mx-auto max-w-7xl relative">
         <SectionHeader
           eyebrow="About NAILO"
           title={
             <>
               A national movement for{" "}
-              <span className="text-gradient">AI literacy</span>
+              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">AI literacy</span>
             </>
           }
           description="NAILO is more than an exam. It's a structured pathway connecting Indian students to the language of tomorrow."
         />
 
-        <div className="mt-16 grid lg:grid-cols-2 gap-10 items-start">
+        <div className="mt-16 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Timeline */}
-          <div className="relative">
-            <div className="absolute left-5 top-2 bottom-2 w-px bg-gradient-to-b from-primary/30 via-accent/30 to-transparent" />
-            <ul className="space-y-6">
-              {story.map((s, i) => (
+          <div className="space-y-4 lg:space-y-5">
+            {story.map((s, i) => {
+              const col = colors[i];
+              return (
                 <Reveal key={s.title} delay={i * 0.08}>
-                  <li className="relative pl-14">
-                    <div className="absolute left-0 top-0 w-10 h-10 rounded-2xl bg-gradient-brand grid place-items-center shadow-glow">
-                      <s.icon className="w-5 h-5 text-white" />
+                  <div className={`rounded-3xl border-2 p-7 lg:p-8 ${col.bg} ${col.border} hover:shadow-lg hover:-translate-y-1 transition-all`}>
+                    <div className="flex items-start gap-4">
+                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${col.icon} grid place-items-center shadow-lg shrink-0`}>
+                        <s.icon className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg lg:text-xl font-bold text-foreground">{s.title}</h3>
+                        <p className="mt-3 text-base text-foreground/80 leading-relaxed font-medium">
+                          {s.text}
+                        </p>
+                      </div>
                     </div>
-                    <div className="rounded-2xl bg-white border border-border p-5 shadow-soft hover:shadow-glow transition-shadow">
-                      <h3 className="text-lg font-bold">{s.title}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">
-                        {s.text}
-                      </p>
-                    </div>
-                  </li>
+                  </div>
                 </Reveal>
-              ))}
-            </ul>
+              );
+            })}
           </div>
 
           {/* Stats */}
           <Reveal delay={0.15}>
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="relative gradient-border p-6 hover:-translate-y-1 transition-transform"
-                >
-                  <div className="text-3xl sm:text-4xl font-bold text-gradient">
-                    <Counter to={s.value} suffix={s.suffix} />
+            <div className="space-y-4 lg:space-y-5">
+              <div className="grid grid-cols-2 gap-4 lg:gap-5">
+                {stats.map((s) => (
+                  <div
+                    key={s.label}
+                    className="rounded-3xl bg-gradient-to-br from-blue-50 to-green-50 border-2 border-blue-200 p-7 hover:shadow-lg transition-all"
+                  >
+                    <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                      <Counter to={s.value} suffix={s.suffix} />
+                    </div>
+                    <div className="mt-3 text-sm lg:text-base font-bold text-foreground/80">
+                      {s.label}
+                    </div>
                   </div>
-                  <div className="mt-2 text-sm text-muted-foreground">
-                    {s.label}
-                  </div>
+                ))}
+              </div>
+              <div className="rounded-3xl p-8 bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-xl hover:shadow-2xl transition-all">
+                <div className="text-xs uppercase tracking-widest font-bold opacity-90 mb-2">
+                  ✨ Our Promise
                 </div>
-              ))}
-              <div className="col-span-2 rounded-3xl p-6 bg-gradient-brand text-white shadow-glow">
-                <div className="text-xs uppercase tracking-widest opacity-80">
-                  Our promise
-                </div>
-                <div className="mt-2 text-xl font-semibold">
-                  Every student, regardless of school or city, gets the same
-                  shot at national-level AI recognition.
+                <div className="text-xl lg:text-2xl font-bold leading-tight">
+                  Every student, regardless of school or city, gets the same shot at national-level AI recognition.
                 </div>
               </div>
             </div>

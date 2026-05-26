@@ -38,88 +38,53 @@ const blocks = [
 ];
 
 export function VisionMission() {
+  const colors = [
+    { bg: "bg-blue-50", border: "border-blue-300", icon: "from-blue-500 to-blue-600", accent: "text-blue-700" },
+    { bg: "bg-green-50", border: "border-green-300", icon: "from-green-500 to-green-600", accent: "text-green-700" },
+    { bg: "bg-purple-50", border: "border-purple-300", icon: "from-purple-500 to-purple-600", accent: "text-purple-700" },
+  ];
+
   return (
-    <section className="relative py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section className="relative py-20 lg:py-32 px-5 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Why NAILO exists"
           title={
             <>
-              Vision, Mission & <span className="text-gradient">Objectives</span>
+              Vision, Mission & <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Objectives</span>
             </>
           }
           description="A national initiative built around a simple belief — every Indian student deserves a foundation in artificial intelligence literacy."
         />
 
-        <div className="mt-16 space-y-20">
+        <div className="mt-16 grid md:grid-cols-3 gap-6 lg:gap-8">
           {blocks.map((b, i) => {
-            const reverse = i % 2 === 1;
+            const col = colors[i];
             return (
-              <div
-                key={b.eyebrow}
-                className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
-                  reverse ? "lg:[&>*:first-child]:order-2" : ""
-                }`}
-              >
-                <Reveal>
-                  <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-soft text-xs font-semibold text-primary mb-4">
-                      <Sparkles className="w-3 h-3" /> {b.eyebrow}
-                    </div>
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight">
-                      {b.title}
-                    </h3>
-                    <p className="mt-4 text-muted-foreground text-base sm:text-lg">
-                      {b.body}
-                    </p>
-                    <ul className="mt-6 space-y-2.5">
-                      {b.points.map((p) => (
-                        <li
-                          key={p}
-                          className="flex items-start gap-3 text-sm text-foreground/80"
-                        >
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-brand" />
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
+              <Reveal key={b.eyebrow} delay={i * 0.1}>
+                <div className={`h-full rounded-3xl border-2 p-8 lg:p-10 ${col.bg} ${col.border} hover:shadow-xl hover:-translate-y-2 transition-all`}>
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${col.icon} grid place-items-center shadow-lg mb-6`}>
+                    <b.icon className="w-8 h-8 text-white" />
                   </div>
-                </Reveal>
-
-                <Reveal delay={0.1}>
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-soft blur-2xl rounded-full opacity-60" />
-                    <div className="relative aspect-[4/3] rounded-3xl glass shadow-glow overflow-hidden p-8 flex flex-col">
-                      <div className="flex items-center justify-between">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-brand grid place-items-center shadow-glow">
-                          <b.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <span className="text-xs font-semibold text-muted-foreground tracking-widest uppercase">
-                          {b.eyebrow}
-                        </span>
-                      </div>
-                      <div className="flex-1 mt-6 grid grid-cols-3 gap-3">
-                        {[...Array(9)].map((_, k) => (
-                          <div
-                            key={k}
-                            className={`rounded-xl ${
-                              [0, 4, 8, 2, 6].includes(k)
-                                ? "bg-gradient-brand opacity-90"
-                                : "bg-white border border-border"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <div className="mt-6 flex items-center justify-between text-xs text-muted-foreground">
-                        <span>Computational thinking</span>
-                        <span className="font-semibold text-foreground">
-                          0{i + 1} / 03
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
+                  <h3 className={`text-2xl lg:text-3xl font-bold ${col.accent} mb-4`}>
+                    {b.eyebrow}
+                  </h3>
+                  <h4 className="text-lg font-bold text-foreground mb-4 leading-tight">
+                    {b.title}
+                  </h4>
+                  <p className="text-foreground/75 text-base mb-6 leading-relaxed">
+                    {b.body}
+                  </p>
+                  <ul className="space-y-3">
+                    {b.points.map((p) => (
+                      <li key={p} className="flex items-start gap-3">
+                        <span className={`w-2 h-2 rounded-full ${col.accent} mt-1.5 shrink-0`} />
+                        <span className="text-sm font-medium text-foreground/85">{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
             );
           })}
         </div>

@@ -33,37 +33,37 @@ const faqs = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faqs" className="relative py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="faqs" className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+      <div className="mx-auto max-w-5xl">
         <SectionHeader
           eyebrow="FAQs"
           title={
             <>
-              Answers to the <span className="text-gradient">big questions</span>
+              Answers to the <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">big questions</span>
             </>
           }
           description="If something isn't here, reach out to our support team at support@nailolympiad.com — we're here to help!"
         />
 
-        <div className="mt-12 max-w-3xl mx-auto space-y-3">
+        <div className="mt-14 space-y-4">
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
               <Reveal key={f.q} delay={i * 0.05}>
-                <div className="rounded-2xl bg-white border border-border shadow-soft overflow-hidden">
+                <div className="rounded-2xl bg-white border-2 border-blue-200 shadow-md hover:shadow-lg overflow-hidden transition-all">
                   <button
                     onClick={() => setOpen(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-5 text-left"
+                    className="w-full flex items-center justify-between gap-4 px-6 py-5 lg:py-6 text-left hover:bg-blue-50/50 transition-colors"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-gradient-soft grid place-items-center text-primary shrink-0">
-                        <HelpCircle className="w-4.5 h-4.5" />
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 grid place-items-center text-white shrink-0 font-bold text-lg">
+                        {i + 1}
                       </div>
-                      <span className="font-semibold">{f.q}</span>
+                      <span className="text-lg lg:text-xl font-bold text-foreground">{f.q}</span>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-muted-foreground transition-transform shrink-0 ${
-                        isOpen ? "rotate-180 text-primary" : ""
+                      className={`w-6 h-6 text-blue-600 transition-transform shrink-0 ${
+                        isOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
@@ -74,9 +74,9 @@ export function FAQ() {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
+                        className="overflow-hidden border-t-2 border-blue-200 bg-blue-50/30"
                       >
-                        <div className="px-5 sm:px-6 pb-6 text-sm text-muted-foreground leading-relaxed">
+                        <div className="px-6 py-6 text-base lg:text-lg text-foreground/85 leading-relaxed font-medium">
                           {f.a}
                         </div>
                       </motion.div>

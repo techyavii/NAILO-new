@@ -98,21 +98,21 @@ export function Syllabus() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="syllabus" className="relative py-20 lg:py-28 bg-gradient-soft">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="syllabus" className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+      <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Syllabus"
           title={
             <>
-              A <span className="text-gradient">comprehensive</span> AI literacy framework
+              A <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">comprehensive</span> AI literacy framework
             </>
           }
           description="Designed by educators and AI practitioners. Built around four pillars in every division."
         />
 
         <Reveal>
-          <div className="mt-10 flex justify-center">
-            <div className="inline-flex p-1 rounded-full bg-white border border-border shadow-soft">
+          <div className="mt-12 flex justify-center">
+            <div className="inline-flex p-1.5 rounded-2xl bg-white border-2 border-blue-200 shadow-lg">
               {data.map((d, i) => (
                 <button
                   key={d.name}
@@ -120,14 +120,14 @@ export function Syllabus() {
                     setTab(i);
                     setOpen(0);
                   }}
-                  className={`px-5 sm:px-7 py-2.5 rounded-full text-sm font-semibold transition-all ${
+                  className={`px-6 sm:px-9 py-3 rounded-xl text-base font-bold transition-all ${
                     tab === i
-                      ? "bg-gradient-brand text-white shadow-glow"
+                      ? "bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-lg"
                       : "text-foreground/70 hover:text-foreground"
                   }`}
                 >
                   {d.name}
-                  <span className="hidden sm:inline ml-2 text-xs opacity-70">
+                  <span className="hidden sm:inline ml-3 text-sm opacity-80 font-semibold">
                     {d.tag}
                   </span>
                 </button>
@@ -136,26 +136,30 @@ export function Syllabus() {
           </div>
         </Reveal>
 
-        <div className="mt-10 max-w-4xl mx-auto">
-          <div className="space-y-3">
+        <div className="mt-14 max-w-5xl mx-auto">
+          <div className="space-y-4 lg:space-y-5">
             {data[tab].sections.map((s, i) => {
               const isOpen = open === i;
+              const bgColors = ["bg-blue-50", "bg-green-50", "bg-purple-50", "bg-yellow-50"];
+              const borderColors = ["border-blue-300", "border-green-300", "border-purple-300", "border-yellow-300"];
+              const iconColors = ["from-blue-500 to-blue-600", "from-green-500 to-green-600", "from-purple-500 to-purple-600", "from-yellow-500 to-yellow-600"];
+              
               return (
                 <Reveal key={s.title} delay={i * 0.05}>
-                  <div className="rounded-2xl bg-white border border-border shadow-soft overflow-hidden">
+                  <div className={`rounded-3xl border-2 ${bgColors[i]} ${borderColors[i]} shadow-md hover:shadow-lg overflow-hidden transition-all`}>
                     <button
                       onClick={() => setOpen(isOpen ? null : i)}
-                      className="w-full flex items-center justify-between gap-4 px-5 sm:px-6 py-5 text-left"
+                      className="w-full flex items-center justify-between gap-4 px-6 lg:px-8 py-6 lg:py-7 text-left hover:bg-white/30 transition-colors"
                     >
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-soft grid place-items-center text-primary">
-                          <Layers className="w-5 h-5" />
+                      <div className="flex items-center gap-5">
+                        <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${iconColors[i]} grid place-items-center text-white shrink-0`}>
+                          <Layers className="w-6 h-6" />
                         </div>
-                        <div className="font-semibold">{s.title}</div>
+                        <div className="text-lg lg:text-xl font-bold text-foreground">{s.title}</div>
                       </div>
                       <ChevronDown
-                        className={`w-5 h-5 text-muted-foreground transition-transform ${
-                          isOpen ? "rotate-180 text-primary" : ""
+                        className={`w-6 h-6 text-foreground/70 transition-transform shrink-0 ${
+                          isOpen ? "rotate-180" : ""
                         }`}
                       />
                     </button>
@@ -166,16 +170,16 @@ export function Syllabus() {
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
+                          className="overflow-hidden border-t-2"
                         >
-                          <div className="px-5 sm:px-6 pb-6 pt-1">
-                            <ul className="grid sm:grid-cols-2 gap-2.5">
+                          <div className="px-6 lg:px-8 py-6">
+                            <ul className="grid sm:grid-cols-2 gap-4">
                               {s.topics.map((t) => (
                                 <li
                                   key={t}
-                                  className="flex items-start gap-3 text-sm text-foreground/80"
+                                  className="flex items-start gap-3 text-base text-foreground/85 font-medium"
                                 >
-                                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gradient-brand shrink-0" />
+                                  <span className="mt-2 w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500 shrink-0" />
                                   {t}
                                 </li>
                               ))}
