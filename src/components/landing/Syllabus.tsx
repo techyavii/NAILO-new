@@ -107,7 +107,7 @@ export function Syllabus() {
               A <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">comprehensive</span> AI literacy framework
             </>
           }
-          description="Designed by educators and AI practitioners. Built around four pillars in every division."
+          description="Designed by educators and AI practitioners. Built around four modules in every division."
         />
 
         <Reveal>

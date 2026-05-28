@@ -14,7 +14,7 @@ const steps = [
   { icon: IdCard, title: "Admit Card", desc: "Auto-generated 7 days before the exam." },
   { icon: MonitorCheck, title: "Online Examination", desc: "Secure, proctored, AI-assisted." },
   { icon: BarChart3, title: "Results", desc: "Detailed AI-powered performance report." },
-  { icon: PartyPopper, title: "Awards Ceremony", desc: "National recognition for top performers." },
+  { icon: PartyPopper, title: "Awards & Recognition", desc: "National recognition for top performers." },
 ];
 
 export function ExamStructure() {
@@ -34,7 +34,7 @@ export function ExamStructure() {
           eyebrow="Examination structure"
           title={
             <>
-              From sign-up to <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">stage</span> — every step.
+              From sign-up to <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Stagewise</span> steps
             </>
           }
           description="A transparent six-stage journey designed for clarity, fairness and a memorable finale."

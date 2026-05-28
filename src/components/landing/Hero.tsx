@@ -46,6 +46,18 @@ export function Hero() {
           <Sparkles className="w-4 h-4" />
           🇮🇳 India's First National AI Literacy Olympiad
         </motion.div>
+        <motion.div
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  className="flex justify-center mb-6"
+>
+  <img
+    src="/NAILO_LOGO.png"
+    alt="NAILO Logo"
+    className="h-12 sm:h-14 lg:h-20 w-auto object-contain"
+  />
+</motion.div>
 
         {/* Heading */}
         <motion.h1
@@ -59,7 +71,7 @@ export function Hero() {
             Olympiad
           </span>
           <span className="block text-5xl sm:text-6xl mt-4">
-            NAILO 2026-27
+            NAILO 2026
           </span>
         </motion.h1>
 
@@ -71,9 +83,9 @@ export function Hero() {
           className="mt-8 text-xl lg:text-2xl text-foreground/75 max-w-3xl mx-auto font-medium leading-relaxed"
         >
           The National Assessment for Computational Thinking &
-          Artificial Intelligence Literacy.
+          Artificial Intelligence Literacy
           <span className="block mt-3 text-foreground font-bold">
-            Empowering the next generation of digital thinkers.
+            Empowering the next generation of digital thinkers
           </span>
         </motion.p>
 
@@ -85,7 +97,7 @@ export function Hero() {
           className="mt-8 inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 text-base font-semibold text-green-700 mx-auto shadow-sm"
         >
           <CheckCircle2 className="w-5 h-5" />
-          No coding required. Just logic, creativity & curiosity.
+          No coding required. Just logic, creativity & curiosity
         </motion.div>
 
         {/* CTA Buttons */}

@@ -97,14 +97,14 @@ export function About() {
                   </div>
                 ))}
               </div>
-              <div className="rounded-3xl p-8 bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-xl hover:shadow-2xl transition-all">
+              {/* <div className="rounded-3xl p-8 bg-gradient-to-r from-blue-500 to-green-500 text-white shadow-xl hover:shadow-2xl transition-all">
                 <div className="text-xs uppercase tracking-widest font-bold opacity-90 mb-2">
                   ✨ Our Promise
                 </div>
                 <div className="text-xl lg:text-2xl font-bold leading-tight">
                   Every student, regardless of school or city, gets the same shot at national-level AI recognition.
                 </div>
-              </div>
+              </div> */}
             </div>
           </Reveal>
         </div>

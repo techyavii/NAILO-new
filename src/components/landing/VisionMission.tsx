@@ -5,7 +5,7 @@ const blocks = [
   {
     icon: Eye,
     eyebrow: "Vision",
-    title: "An AI-literate generation, shaping India's digital future.",
+    title: "An AI-literate generation, shaping India's digital future",
     body: "To make every Indian student computationally fluent and ethically aware of how AI is reshaping the world — preparing them to lead, not just consume, the technologies of tomorrow.",
     points: [
       "Inclusive AI literacy from Class 6 to 12",
@@ -16,7 +16,7 @@ const blocks = [
   {
     icon: Target,
     eyebrow: "Mission",
-    title: "Equip students with the thinking that builds intelligent systems.",
+    title: "Equip students with the thinking that builds intelligent systems",
     body: "NAILO is built to evaluate and develop computational thinking, problem decomposition, pattern recognition and responsible AI awareness — skills proven to define the next generation of innovators.",
     points: [
       "Standardised national assessment",
@@ -27,7 +27,7 @@ const blocks = [
   {
     icon: ListChecks,
     eyebrow: "Objectives",
-    title: "Measure, mentor, and motivate — at national scale.",
+    title: "Measure, mentor, and motivate — at national scale",
     body: "From identifying young talent to providing structured pathways for growth, NAILO connects schools, students and educators in a single high-quality assessment ecosystem.",
     points: [
       "Benchmark AI readiness across India",
@@ -39,10 +39,28 @@ const blocks = [
 
 export function VisionMission() {
   const colors = [
-    { bg: "bg-blue-50", border: "border-blue-300", icon: "from-blue-500 to-blue-600", accent: "text-blue-700" },
-    { bg: "bg-green-50", border: "border-green-300", icon: "from-green-500 to-green-600", accent: "text-green-700" },
-    { bg: "bg-purple-50", border: "border-purple-300", icon: "from-purple-500 to-purple-600", accent: "text-purple-700" },
-  ];
+  {
+    bg: "bg-blue-50",
+    border: "border-blue-300",
+    icon: "from-blue-500 to-blue-600",
+    accent: "text-blue-700",
+    dot: "bg-blue-600",
+  },
+  {
+    bg: "bg-green-50",
+    border: "border-green-300",
+    icon: "from-green-500 to-green-600",
+    accent: "text-green-700",
+    dot: "bg-green-600",
+  },
+  {
+    bg: "bg-purple-50",
+    border: "border-purple-300",
+    icon: "from-purple-500 to-purple-600",
+    accent: "text-purple-700",
+    dot: "bg-purple-600",
+  },
+];
 
   return (
     <section className="relative py-20 lg:py-32 px-5 lg:px-8">
@@ -78,7 +96,7 @@ export function VisionMission() {
                   <ul className="space-y-3">
                     {b.points.map((p) => (
                       <li key={p} className="flex items-start gap-3">
-                        <span className={`w-2 h-2 rounded-full ${col.accent} mt-1.5 shrink-0`} />
+                        <span className={`w-2 h-2 rounded-full ${col.dot} mt-1.5 shrink-0`} />
                         <span className="text-sm font-medium text-foreground/85">{p}</span>
                       </li>
                     ))}

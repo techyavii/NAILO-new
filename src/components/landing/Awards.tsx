@@ -55,14 +55,17 @@ export function Awards() {
               Rewards that <span className="text-gradient">match the ambition</span>
             </>
           }
-          description="Cash prizes, medals, certificates and a moment of national recognition that stays for life."
+          description="Cash prizes, medals, certificates and national recognition that stays for life."
         />
 
         {/* Junior Division */}
         <Reveal delay={0.1}>
           <div className="mt-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-sm font-semibold text-blue-900 mb-6">
-              <Medal className="w-4 h-4" /> Junior Division (Classes VI-VIII)
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-blue-900 mb-6 shadow-sm">
+              <Medal className="w-4 h-4" />
+              <span className="text-sm font-semibold">
+                Junior Division • Classes 6<sup>th</sup> – 8<sup>th</sup>
+              </span>
             </div>
             <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-8">
               <div className="overflow-x-auto">
@@ -92,8 +95,11 @@ export function Awards() {
         {/* Senior Division */}
         <Reveal delay={0.15}>
           <div className="mt-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 text-sm font-semibold text-green-900 mb-6">
-              <Trophy className="w-4 h-4" /> Senior Division (Classes IX-XII)
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 text-green-900 mb-6 shadow-sm">
+              <Trophy className="w-4 h-4" />
+              <span className="text-sm font-semibold">
+                Senior Division • Classes 9<sup>th</sup> – 12<sup>th</sup>
+              </span>
             </div>
             <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-green-50 to-green-100 border border-green-200 p-8">
               <div className="overflow-x-auto">

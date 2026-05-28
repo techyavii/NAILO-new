@@ -15,11 +15,11 @@ const steps = [
   { icon: UserPlus, title: "Registration" },
   { icon: CreditCard, title: "Fee Payment" },
   { icon: LayoutDashboard, title: "Dashboard Access" },
-  { icon: BookOpen, title: "Study Material" },
+  { icon: BookOpen, title: "AI Resource Hub" },
   { icon: FileEdit, title: "Mock Tests" },
-  { icon: GraduationCap, title: "Examination" },
+  { icon: GraduationCap, title: "NALO Exam (Online)" },
   { icon: BarChart3, title: "Results" },
-  { icon: Trophy, title: "Awards" },
+  { icon: Trophy, title: "Awards & Recognition" },
 ];
 
 export function StudentJourney() {
@@ -41,7 +41,7 @@ export function StudentJourney() {
           eyebrow="Student journey"
           title={
             <>
-              From sign-up to <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">stage</span>, simply.
+              From sign-up to <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">stages</span>, Simplified
             </>
           }
           description="Eight friction-free steps designed around how students actually learn and compete."
@@ -64,9 +64,9 @@ export function StudentJourney() {
                     </div>
                     <div className="text-lg font-bold text-foreground">{s.title}</div>
                   </div>
-                  {i < steps.length - 1 && (
+                  {/* {i < steps.length - 1 && (
                     <ArrowRight className="hidden lg:block absolute top-1/2 -right-4 -translate-y-1/2 w-6 h-6 text-blue-400 group-hover:text-blue-600 transition-colors" />
-                  )}
+                  )} */}
                 </div>
               </Reveal>
             );

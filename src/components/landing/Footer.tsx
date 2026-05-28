@@ -12,7 +12,7 @@ import {
 const cols = [
   {
     title: "Olympiad",
-    links: ["About NAILO", "Syllabus", "Exam Structure", "Awards", "Important Dates"],
+    links: ["About NAILO", "Syllabus", "Exam Structure", "Awards & Recognition", "Important Dates"],
   },
   {
     title: "Students",
@@ -20,7 +20,7 @@ const cols = [
   },
   {
     title: "Schools",
-    links: ["School Partnership", "Bulk Registration", "Educator Resources", "Mentorship", "Workshops"],
+    links: ["School Partnership", "Bulk Registration", "Educator Resources"],
   },
 ];
 
@@ -39,7 +39,7 @@ export function Footer() {
                     className="h-10 w-auto"
                   />
                 </div>
-                <div className="text-lg font-bold text-foreground mt-2">NAILO 2026-27</div>
+                <div className="text-lg font-bold text-foreground mt-2">NAILO</div>
                 <div className="text-sm text-foreground/70 mt-1 font-medium">
                   National AI Literacy Olympiad
                 </div>
@@ -62,15 +62,7 @@ export function Footer() {
             <ul className="mt-7 space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-600" />
-                <a href="mailto:contact@nailo.org.in" className="hover:text-blue-600 transition-colors font-medium">contact@nailo.org.in</a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-blue-600" />
                 <a href="mailto:support@nailolympiad.com" className="hover:text-blue-600 transition-colors font-medium">support@nailolympiad.com</a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-blue-600" />
-                <span className="font-medium">+91 80000 12345</span>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-blue-600" />

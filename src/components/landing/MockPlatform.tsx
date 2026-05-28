@@ -20,7 +20,7 @@ export function MockPlatform() {
               An <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">AI-powered</span> preparation engine
             </>
           }
-          description="Mock tests, real-time analytics and expert sessions — all in one student dashboard."
+          description="Mock tests, real-time analytics and AI-resource hub — all in one student dashboard."
         />
 
         <div className="mt-16 grid lg:grid-cols-12 gap-8 items-start">
@@ -121,14 +121,14 @@ export function MockPlatform() {
               },
               {
                 icon: GraduationCap,
-                title: "Expert workshops",
-                desc: "Live sessions with educators, AI practitioners and past toppers.",
+                title: "AI Resource Hub",
+                desc: "Explore curated AI tools, beginner-friendly guides, practice material, and learning resources designed for students.",
                 color: "from-purple-500 to-purple-600",
                 bg: "bg-purple-50"
               },
               {
                 icon: PlayCircle,
-                title: "Unlimited mock tests",
+                title: "mock tests",
                 desc: "Full-length and topic-wise tests across both divisions.",
                 color: "from-pink-500 to-pink-600",
                 bg: "bg-pink-50"

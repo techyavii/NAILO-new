@@ -2,12 +2,12 @@ import { Calendar } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
 
 const dates = [
-  { label: "Registration Opens", value: "15 Aug 2026" },
-  { label: "Mock Test Access", value: "01 Sep 2026" },
-  { label: "Registration Deadline", value: "30 Nov 2026" },
-  { label: "Exam Date", value: "10 Jan 2027" },
-  { label: "Results Announced", value: "15 Feb 2027" },
-  { label: "Awards Ceremony", value: "20 Mar 2027" },
+  { label: "Registration Opens", value: "1 Aug 2026" },
+  { label: "Mock Test Access", value: "Oct - Nov 2026" },
+  { label: "Registration Deadline", value: "Oct 2026" },
+  { label: "Exam Date", value: "20 Dec 2027" },
+  { label: "Results Announced", value: "Feb 2027" },
+  { label: "Awards & Recognition", value: "Mar 2027" },
 ];
 
 export function ImportantDates() {

@@ -38,8 +38,8 @@ const items = [
   },
   {
     icon: Award,
-    title: "Certificates & Awards",
-    desc: "Verified digital certificates, medals and a ₹1,00,000 grand prize pool.",
+    title: "Awards & Recognition",
+    desc: "Verified digital certificates, medals and a ₹3,00,000 grand prize pool.",
   },
 ];
 
@@ -61,7 +61,7 @@ export function WhyParticipate() {
           title={
             <>
               Six reasons NAILO is{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">unmissable</span>
+              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">UNMISSABLE</span>
             </>
           }
           description="A single Olympiad that recognises talent, builds skill and shapes the way young Indians think about AI."
