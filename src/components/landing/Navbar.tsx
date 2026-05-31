@@ -25,7 +25,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/85 backdrop-blur-xl border-b border-border shadow-soft"
           : "bg-transparent"
@@ -38,17 +38,17 @@ export function Navbar() {
             alt="NAILO" 
             className="h-8 w-auto"
           /> */}
-          {/* <div className="hidden sm:flex flex-col items-start leading-tight">
+          <div className="hidden sm:flex flex-col items-start leading-tight">
             <div className="text-sm font-bold tracking-tight">NAILO</div>
             <div className="text-[10px] text-muted-foreground -mt-0.5"></div>
-          </div> */}
+          </div>
           <div className="hidden lg:inline-flex items-center gap-2 ml-4 pl-4 border-l border-border">
             {/* <span className="text-xs text-muted-foreground font-medium">by</span> */}
-            <img 
+            {/* <img 
               src="/AFI_EDUTECH_LOGO.jpg" 
               alt="AFI EduTech" 
               className="h-10 w-auto"
-            />
+            /> */}
           </div>
         </a>
 

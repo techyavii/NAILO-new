@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/landing/Navbar";
+import ConferenceBanner from "@/components/landing/ConferenceBanner";
 import { Hero } from "@/components/landing/Hero";
 import { FeatureStrip } from "@/components/landing/FeatureStrip";
 import { VisionMission } from "@/components/landing/VisionMission";
@@ -19,6 +20,7 @@ import { Footer } from "@/components/landing/Footer";
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <ConferenceBanner />
       <Navbar />
       <main>
         <Hero />
