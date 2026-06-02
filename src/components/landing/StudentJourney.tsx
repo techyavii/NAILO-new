@@ -208,7 +208,7 @@ export function StudentJourney() {
               </span>
             </>
           }
-          description="A fun, transparent and engaging pathway that guides students from registration and preparation to examination, rankings and national recognition."
+          description="A fun, transparent and engaging pathway that guides students from registration and preparation to examination, rankings and national recognition"
         />
 
         <div className="mt-16">
