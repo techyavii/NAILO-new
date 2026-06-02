@@ -47,7 +47,7 @@ export function Footer() {
               <div className="text-right">
                 <div className="text-xs text-foreground/60 mb-2 font-semibold">Organized by</div>
                 <img 
-                  src="/AFI_EDUTECH_LOGO.jpg" 
+                  src="/AFI_EDUTECH_LOGO.jpeg" 
                   alt="AFI EduTech" 
                   className="h-8 w-auto ml-auto"
                 />

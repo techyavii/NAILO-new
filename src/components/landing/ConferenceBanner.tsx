@@ -11,13 +11,13 @@ const ConferenceBanner = () => {
       }}
     >
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-opacity-65"></div>
+     <div className="absolute inset-0 bg-black/60"></div>
       <div className="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
         {/* Left Logo - AFI EduTech Logo */}
         <div className="flex items-center gap-2 lg:flex-row flex-col">
           <div className="p-2 rounded-lg shadow-md bg-white">
             <img 
-              src="/AFI_EDUTECH_LOGO.jpg" 
+              src="/AFI_EDUTECH_LOGO.jpeg" 
               alt="AFI EduTech Logo" 
               className="h-20 md:h-24 w-auto"
             />

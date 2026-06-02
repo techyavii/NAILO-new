@@ -24,7 +24,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-32 lg:pt-40 pb-20 lg:pb-28 overflow-hidden"
+      className="relative pt-32 lg:pt-16 pb-20 lg:pb-28 overflow-hidden"
     >
       {/* Background Gradient Blobs */}
       <div className="blob w-[520px] h-[520px] -top-32 -left-32 bg-blue-300/40" />
@@ -52,11 +52,11 @@ export function Hero() {
   transition={{ duration: 0.5 }}
   className="flex justify-center mb-6"
 >
-  <img
+  {/* <img
     src="/NAILO_LOGO.png"
     alt="NAILO Logo"
     className="h-12 sm:h-14 lg:h-20 w-auto object-contain"
-  />
+  /> */}
 </motion.div>
 
         {/* Heading */}
