@@ -46,9 +46,9 @@ const ConferenceBanner = () => {
         <div className='flex gap-4 flex-col items-center'>
           <div className="p-2 rounded-lg shadow-md bg-white">
             <img
-              src="/NAILO_LOGO.png"
+              src="/banner.png"
               alt="NAILO Logo"
-              className="h-20 md:h-24 w-auto"
+              className="h-20 md:h-20 w-auto"
             />
           </div>
         </div>
@@ -58,3 +58,17 @@ const ConferenceBanner = () => {
 };
 
 export default ConferenceBanner;
+
+// const ConferenceBanner = () => {
+//   return (
+//     <section className="w-full overflow-hidden">
+//       <img
+//         src="/banner.png"
+//         alt="NAILO Banner"
+//         className="w-full h-[250px] md:h-[320px] lg:h-[320px] object-fill"
+//       />
+//     </section>
+//   );
+// };
+
+// export default ConferenceBanner;
