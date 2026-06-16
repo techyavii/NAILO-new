@@ -50,13 +50,13 @@ export function Hero() {
   initial={{ opacity: 0, y: 10 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5 }}
-  className="flex justify-center mb-6"
+  className="flex justify-center mb-10"
 >
-  {/* <img
-    src="/NAILO_LOGO.png"
+  <img
+    src="/banner.png"
     alt="NAILO Logo"
-    className="h-12 sm:h-14 lg:h-20 w-auto object-contain"
-  /> */}
+    className="w-full max-w-3xl h-auto object-contain"
+  />
 </motion.div>
 
         {/* Heading */}
