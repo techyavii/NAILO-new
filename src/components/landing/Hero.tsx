@@ -108,10 +108,12 @@ export function Hero() {
           className="mt-12 flex flex-wrap justify-center gap-4"
         >
           <a
-            href="#register"
+            href="https://rzp.io/rzp/sKBaz3gm"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all"
           >
-            🚀 Register Now
+            🚀 Register Now ₹399
             <ArrowRight className="w-5 h-5" />
           </a>
 
@@ -124,11 +126,13 @@ export function Hero() {
           </a>
 
           <a
-            href="#mock"
+            href="https://rzp.io/rzp/sKBaz3gm"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-green-50 border-2 border-green-200 text-green-700 text-base font-bold hover:bg-green-100 transition-all shadow-md hover:shadow-lg"
           >
             <PlayCircle className="w-5 h-5" />
-            Try Mock Test
+            Explore the platform
           </a>
         </motion.div>
 

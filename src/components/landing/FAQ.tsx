@@ -22,11 +22,11 @@ const faqs = [
   },
   {
     q: "What are the rewards?",
-    a: "A ₹1,00,000 grand prize for the national topper, plus Gold, Silver and Bronze medals, digital certificates and national recognition through the NAILO Wall of Fame.",
+    a: "A 1,00,000 grand prize for the national topper, plus Gold, Silver and Bronze medals, digital certificates and national recognition through the NAILO Wall of Fame.",
   },
   {
     q: "How do students register?",
-    a: "Click Register Now, fill in your school and student details, complete the registration fee payment and instantly unlock your dashboard, mock tests and study material.",
+    a: "Click the Razorpay registration link, pay ₹399, and instantly unlock your dashboard, study resources and learning material.",
   },
 ];
 

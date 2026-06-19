@@ -20,7 +20,7 @@ export function MockPlatform() {
               An <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">AI-powered</span> preparation engine
             </>
           }
-          description="Mock tests, real-time analytics and AI-resource hub — all in one student dashboard."
+          description="Real-time analytics and AI resource hub — all in one student dashboard."
         />
 
         <div className="mt-16 grid lg:grid-cols-12 gap-8 items-start">
@@ -41,7 +41,7 @@ export function MockPlatform() {
 
                 <div className="grid grid-cols-3 gap-3 mb-6">
                   {[
-                    { l: "Mock Tests", v: "18", s: "completed" },
+                    { l: "Practice Modules", v: "18", s: "completed" },
                     { l: "Avg Score", v: "82%", s: "+6% this week" },
                     { l: "Percentile", v: "94.7", s: "All India" },
                   ].map((k) => (
@@ -108,7 +108,7 @@ export function MockPlatform() {
               {
                 icon: Brain,
                 title: "AI performance reports",
-                desc: "Every mock comes with a personalised AI breakdown of strengths and gaps.",
+                desc: "Every practice module comes with a personalised AI breakdown of strengths and gaps.",
                 color: "from-blue-500 to-blue-600",
                 bg: "bg-blue-50"
               },
@@ -128,8 +128,8 @@ export function MockPlatform() {
               },
               {
                 icon: PlayCircle,
-                title: "mock tests",
-                desc: "Full-length and topic-wise tests across both divisions.",
+                title: "Practice Modules",
+                desc: "Full-length and topic-wise learning paths across both divisions.",
                 color: "from-pink-500 to-pink-600",
                 bg: "bg-pink-50"
               },

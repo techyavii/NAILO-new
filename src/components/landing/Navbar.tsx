@@ -8,6 +8,7 @@ const links = [
   { label: "Syllabus", href: "#syllabus" },
   { label: "Exam Structure", href: "#exam" },
   { label: "Awards", href: "#awards" },
+  { label: "Advisory Board", href: "#advisory" },
   { label: "FAQs", href: "#faqs" },
   { label: "Contact", href: "#contact" },
 ];
@@ -68,10 +69,12 @@ export function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a
-            href="#register"
+            href="https://rzp.io/rzp/sKBaz3gm"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all"
           >
-            🚀 Register Now
+            🚀 Register Now ₹399
           </a>
         </div>
 

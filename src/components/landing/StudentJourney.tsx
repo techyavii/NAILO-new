@@ -107,8 +107,8 @@ const steps = [
   },
   {
     icon: Laptop2,
-    title: "Study Material & Mock Tests",
-    desc: "Prepare with AI literacy resources, practice tests and learning modules.",
+    title: "Study Material & Practice Resources",
+    desc: "Prepare with AI literacy resources, learning modules and guided practice.",
   },
   {
     icon: IdCard,

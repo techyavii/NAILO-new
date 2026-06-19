@@ -11,8 +11,7 @@ import { Reveal } from "./shared";
 const features = [
   { icon: GraduationCap, label: "Classes 6–12", desc: "Junior & Senior groups", color: "from-blue-500 to-blue-600", bgColor: "bg-blue-50" },
   { icon: BrainCircuit, label: "AI Literacy", desc: "Future-ready curriculum", color: "from-green-500 to-green-600", bgColor: "bg-green-50" },
-  
-  { icon: FileCheck2, label: "Mock Tests", desc: "Unlimited practice", color: "from-yellow-500 to-yellow-600", bgColor: "bg-yellow-50" },
+  { icon: FileCheck2, label: "Practice Resources", desc: "Curated platform learning", color: "from-yellow-500 to-yellow-600", bgColor: "bg-yellow-50" },
   { icon: Trophy, label: "National Ranking", desc: "All-India percentile", color: "from-purple-500 to-purple-600", bgColor: "bg-purple-50" },
   { icon: Award, label: "Awards & Recognition", desc: "For every participant", color: "from-pink-500 to-pink-600", bgColor: "bg-pink-50" },
   { icon: Rocket, label: "Future Skills", desc: "Logic, ethics, thinking", color: "from-blue-500 to-green-500", bgColor: "bg-gradient-to-br from-blue-50 to-green-50" },

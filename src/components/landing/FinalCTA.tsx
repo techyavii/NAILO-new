@@ -24,10 +24,12 @@ export function FinalCTA() {
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center flex-wrap">
                 <a
-                  href="#"
+                  href="https://rzp.io/rzp/sKBaz3gm"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-2xl bg-white text-blue-600 text-lg font-bold shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all"
                 >
-                  🚀 Register Now <ArrowRight className="w-6 h-6" />
+                  🚀 Register Now ₹399 <ArrowRight className="w-6 h-6" />
                 </a>
                 <a
                   href="#syllabus"
@@ -37,7 +39,7 @@ export function FinalCTA() {
                 </a>
               </div>
               <p className="mt-10 text-sm text-white/80 font-medium">
-                ⏰ Exam Date: 20 January 2027 | 🏆 Total Prize Pool: ₹3+ Lakhs
+                ⏰ Exam Date: 20 January 2027 | 🏆 Total Prize Pool: 3+ Lakhs
               </p>
             </div>
           </div>

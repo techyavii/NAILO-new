@@ -3,18 +3,18 @@ import { Reveal, SectionHeader } from "./shared";
 
 export function Awards() {
   const juniorPrizes = [
-    { rank: "National Topper (Rank 1)", prize: "₹31,000", awards: "National Winner's Trophy + Gold Medal" },
-    { rank: "Rank 2", prize: "₹21,000", awards: "Silver Medal" },
-    { rank: "Rank 3", prize: "₹11,000", awards: "Bronze Medal" },
-    { rank: "Rank 4-10", prize: "₹3,100", awards: "Merit & Appreciation Certificate" },
+    { rank: "National Topper (Rank 1)", prize: "30,000", awards: "National Winner's Trophy + Gold Medal" },
+    { rank: "Rank 2", prize: "20,000", awards: "Silver Medal" },
+    { rank: "Rank 3", prize: "11,000", awards: "Bronze Medal" },
+    { rank: "Rank 4-10", prize: "3,100", awards: "Merit & Appreciation Certificate" },
     { rank: "Top 10%", prize: "—", awards: "Merit & Appreciation Certificates" },
   ];
 
   const seniorPrizes = [
-    { rank: "National Topper (Rank 1)", prize: "₹1,00,000", awards: "National Winner's Trophy + Gold Medal" },
-    { rank: "Rank 2", prize: "₹51,000", awards: "Silver Medal" },
-    { rank: "Rank 3", prize: "₹31,000", awards: "Bronze Medal" },
-    { rank: "Rank 4-10", prize: "₹5,100", awards: "Merit & Appreciation Certificate" },
+    { rank: "National Topper (Rank 1)", prize: "30,000", awards: "National Winner's Trophy + Gold Medal" },
+    { rank: "Rank 2", prize: "20,000", awards: "Silver Medal" },
+    { rank: "Rank 3", prize: "11,000", awards: "Bronze Medal" },
+    { rank: "Rank 4-10", prize: "3,100", awards: "Merit & Appreciation Certificate" },
     { rank: "Top 10%", prize: "—", awards: "Merit & Appreciation Certificates" },
   ];
 

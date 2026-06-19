@@ -39,7 +39,7 @@ const items = [
   {
     icon: Award,
     title: "Awards & Recognition",
-    desc: "Verified digital certificates, medals and a ₹3,00,000 grand prize pool.",
+    desc: "Verified digital certificates, medals and a 3,00,000 grand prize pool.",
   },
 ];
 

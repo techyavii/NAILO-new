@@ -16,7 +16,7 @@ const cols = [
   },
   {
     title: "Students",
-    links: ["Register", "Mock Tests", "Sample Papers", "Results", "Dashboard"],
+    links: ["Register", "Study Resources", "Sample Papers", "Results", "Dashboard"],
   },
   {
     title: "Schools",

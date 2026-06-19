@@ -9,7 +9,7 @@ import {
 import { Reveal, SectionHeader } from "./shared";
 
 const features = [
-  { icon: LayoutDashboard, title: "Student dashboard", desc: "Personalised home for tests, results and resources." },
+  { icon: LayoutDashboard, title: "Student dashboard", desc: "Personalised home for exam dashboard, results and resources." },
   { icon: ShieldCheck, title: "Secure exams", desc: "Proctored, encrypted and tamper-resistant by design." },
   { icon: LineChart, title: "Analytics", desc: "AI breakdown of accuracy, timing and concept gaps." },
   { icon: Award, title: "Certificates", desc: "Verifiable digital certificates issued instantly." },
@@ -55,6 +55,20 @@ export function Platform() {
               </Reveal>
             );
           })}
+        </div>
+
+        <div className="mt-14 rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
+          <div className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600 mb-4">
+            Platform partner
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+            <div className="rounded-3xl bg-blue-50 p-6 border border-blue-100 flex items-center justify-center shrink-0">
+              <img src="/partner.webp" alt="Pesofs.com" className="h-16 object-contain" />
+            </div>
+            <p className="text-base text-foreground/80 font-medium max-w-3xl">
+              Pesofs.com powers the NAILO dashboard and online exam delivery, providing secure, reliable platform infrastructure for student assessment.
+            </p>
+          </div>
         </div>
       </div>
     </section>

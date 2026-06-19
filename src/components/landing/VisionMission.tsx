@@ -21,7 +21,7 @@ const blocks = [
     points: [
       "Standardised national assessment",
       "Curriculum-aligned with NEP 2020",
-      "Continuous practice through mock tests",
+      "Continuous practice through guided resources",
     ],
   },
   {

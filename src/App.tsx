@@ -8,11 +8,11 @@ import { WhyParticipate } from "@/components/landing/WhyParticipate";
 import { Eligibility } from "@/components/landing/Eligibility";
 import { ExamStructure } from "@/components/landing/ExamStructure";
 import { Syllabus } from "@/components/landing/Syllabus";
-import { MockPlatform } from "@/components/landing/MockPlatform";
 import { Awards } from "@/components/landing/Awards";
 import { ImportantDates } from "@/components/landing/ImportantDates";
 import { StudentJourney } from "@/components/landing/StudentJourney";
 import { Platform } from "@/components/landing/Platform";
+import { AdvisoryBoard } from "@/components/landing/AdvisoryBoard";
 import { FAQ } from "@/components/landing/FAQ";
 import { FinalCTA } from "@/components/landing/FinalCTA";
 import { Footer } from "@/components/landing/Footer";
@@ -31,8 +31,8 @@ function Index() {
         <Eligibility />
         <ExamStructure />
         <Syllabus />
-        <MockPlatform />
         <Awards />
+        <AdvisoryBoard />
         <ImportantDates />
         <StudentJourney />
         <Platform />

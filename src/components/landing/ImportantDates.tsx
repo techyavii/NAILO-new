@@ -3,7 +3,7 @@ import { Reveal, SectionHeader } from "./shared";
 
 const dates = [
   { label: "Registration Opens", value: "1 Aug 2026" },
-  { label: "Mock Test Access", value: "Oct - Nov 2026" },
+  { label: "Practice Resources Access", value: "Oct - Nov 2026" },
   { label: "Registration Deadline", value: "Oct 2026" },
   { label: "Exam Date", value: "20 Dec 2027" },
   { label: "Results Announced", value: "Feb 2027" },
