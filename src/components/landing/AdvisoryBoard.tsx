@@ -1,30 +1,36 @@
-import { Users, Globe2, Award } from "lucide-react";
+import { Award } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
 
 const members = [
   {
     name: "Manu Malek",
     affiliation: "Stevens Institute of Technology, USA",
+    image: "/advisory/manu_malek.jpg",
   },
   {
     name: "Jon G. Hall",
     affiliation: "The Open University, UK",
+    image: "/advisory/jon_g_hall.jpeg",
   },
   {
     name: "Francesco Piccialli",
     affiliation: "University of Naples Federico II, Italy",
+    image: "/advisory/francesco_piccialli.jpeg",
   },
   {
     name: "Sarada Prasad Gochhayat",
     affiliation: "IIT Jammu",
+    image: "/advisory/sarada_prasad_gochhayat.jpeg",
   },
   {
     name: "Bhuvan Unhelkar",
     affiliation: "University of South Florida, USA",
+    image: "/advisory/bhuvan_unhelkar.jpeg",
   },
   {
     name: "Ajay Jaiswal",
     affiliation: "School of Open Learning, University of Delhi",
+    image: "/advisory/ajay_jaiswal.jpg",
   },
 ];
 
@@ -45,19 +51,21 @@ export function AdvisoryBoard() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {members.map((member) => (
             <Reveal key={member.name}>
-              <div className="rounded-3xl border border-blue-200 bg-white p-7 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="flex items-center gap-3 mb-5 text-blue-600">
-                  <div className="w-12 h-12 rounded-3xl bg-gradient-to-br from-blue-500 to-green-500 grid place-items-center text-white shadow-lg">
-                    <Users className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <div className="text-base font-semibold">{member.name}</div>
+              <div className="rounded-3xl border border-blue-200 bg-white overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full aspect-square object-cover"
+                />
+                <div className="p-7">
+                  <div className="mb-5">
+                    <div className="text-base font-semibold text-blue-600">{member.name}</div>
                     <div className="text-sm text-foreground/70">{member.affiliation}</div>
                   </div>
+                  <p className="text-sm text-foreground/80 leading-relaxed">
+                    A distinguished advisor shaping the academic integrity and global relevance of NAILO.
+                  </p>
                 </div>
-                <p className="text-sm text-foreground/80 leading-relaxed">
-                  A distinguished advisor shaping the academic integrity and global relevance of NAILO.
-                </p>
               </div>
             </Reveal>
           ))}
