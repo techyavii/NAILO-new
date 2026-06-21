@@ -11,10 +11,10 @@ export function Awards() {
   ];
 
   const seniorPrizes = [
-    { rank: "National Topper (Rank 1)", prize: "30,000", awards: "National Winner's Trophy + Gold Medal" },
-    { rank: "Rank 2", prize: "20,000", awards: "Silver Medal" },
-    { rank: "Rank 3", prize: "11,000", awards: "Bronze Medal" },
-    { rank: "Rank 4-10", prize: "3,100", awards: "Merit & Appreciation Certificate" },
+    { rank: "National Topper (Rank 1)", prize: "1,00,000", awards: "National Winner's Trophy + Gold Medal" },
+    { rank: "Rank 2", prize: "50,000", awards: "Silver Medal" },
+    { rank: "Rank 3", prize: "25,000", awards: "Bronze Medal" },
+    { rank: "Rank 4-10", prize: "5,000", awards: "Merit & Appreciation Certificate" },
     { rank: "Top 10%", prize: "—", awards: "Merit & Appreciation Certificates" },
   ];
 
