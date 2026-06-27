@@ -16,10 +16,10 @@ const ConferenceBanner = () => {
         {/* Left Logo - AFI EduTech Logo */}
         <div className="flex items-center gap-2 lg:flex-row flex-col">
           <div className="p-2 rounded-lg shadow-md bg-white">
-            <img 
-              src="/AFI_EDUTECH_LOGO.jpeg" 
-              alt="AFI EduTech Logo" 
-              className="h-20 md:h-24 w-auto"
+            <img
+              src="/banner.png"
+              alt="NAILO Logo"
+              className="h-20 md:h-20 w-auto"
             />
           </div>
         </div>
@@ -45,10 +45,11 @@ const ConferenceBanner = () => {
         {/* Right Logo - NAILO Logo */}
         <div className='flex gap-4 flex-col items-center'>
           <div className="p-2 rounded-lg shadow-md bg-white">
-            <img
-              src="/banner.png"
-              alt="NAILO Logo"
-              className="h-20 md:h-20 w-auto"
+            
+            <img 
+              src="/AFI_EDUTECH_LOGO.jpeg" 
+              alt="AFI EduTech Logo" 
+              className="h-20 md:h-24 w-auto"
             />
           </div>
         </div>

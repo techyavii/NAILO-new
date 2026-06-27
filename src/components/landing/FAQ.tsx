@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "How is the exam conducted?",
-    a: "The exam is conducted online through the NAILO platform, with secure proctoring and instant scoring. Students receive admit cards and detailed AI-generated performance reports.",
+    a: "The exam is conducted online through the NAILO platform, with secure proctoring and instant scoring.",
   },
   {
     q: "What are the rewards?",

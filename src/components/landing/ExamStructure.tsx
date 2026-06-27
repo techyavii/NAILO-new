@@ -11,7 +11,6 @@ import { Reveal, SectionHeader } from "./shared";
 const steps = [
   { icon: ClipboardList, title: "Registration", desc: "Students sign up online with school details." },
   { icon: Laptop2, title: "Practice Resources", desc: "Dedicated study resources and learning tools on the NAILO platform." },
-  { icon: IdCard, title: "Admit Card", desc: "Auto-generated 7 days before the exam." },
   { icon: MonitorCheck, title: "Online Examination", desc: "Secure, proctored, AI-assisted." },
   { icon: BarChart3, title: "Results", desc: "Detailed AI-powered performance report." },
   { icon: PartyPopper, title: "Awards & Recognition", desc: "National recognition for top performers." },

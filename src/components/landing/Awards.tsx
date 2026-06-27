@@ -1,45 +1,113 @@
-import { Trophy, Medal, Star, Award, Crown } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
+import {
+  Trophy,
+  Medal,
+  Star,
+  Award,
+  Crown,
+  School,
+  UserRound,
+  Users,
+} from "lucide-react";
 
 export function Awards() {
   const juniorPrizes = [
-    { rank: "National Topper (Rank 1)", prize: "30,000", awards: "National Winner's Trophy + Gold Medal" },
-    { rank: "Rank 2", prize: "20,000", awards: "Silver Medal" },
-    { rank: "Rank 3", prize: "11,000", awards: "Bronze Medal" },
-    { rank: "Rank 4-10", prize: "3,100", awards: "Merit & Appreciation Certificate" },
-    { rank: "Top 10%", prize: "—", awards: "Merit & Appreciation Certificates" },
-  ];
-
+  {
+    rank: "National Topper (Rank 1)",
+    prize: "₹30,000",
+    awards: "National Winner's Trophy + Gold Medal",
+  },
+  {
+    rank: "Rank 2",
+    prize: "₹20,000",
+    awards: "Silver Medal",
+  },
+  {
+    rank: "Rank 3",
+    prize: "₹10,000",
+    awards: "Bronze Medal",
+  },
+  {
+    rank: "Rank 4-10",
+    prize: "₹3,000",
+    awards: "Merit & Appreciation Certificate",
+  },
+  {
+    rank: "Top 10%",
+    prize: "—",
+    awards: "Merit & Appreciation Certificates",
+  },
+];
   const seniorPrizes = [
-    { rank: "National Topper (Rank 1)", prize: "1,00,000", awards: "National Winner's Trophy + Gold Medal" },
-    { rank: "Rank 2", prize: "50,000", awards: "Silver Medal" },
-    { rank: "Rank 3", prize: "25,000", awards: "Bronze Medal" },
-    { rank: "Rank 4-10", prize: "5,000", awards: "Merit & Appreciation Certificate" },
-    { rank: "Top 10%", prize: "—", awards: "Merit & Appreciation Certificates" },
-  ];
+  {
+    rank: "National Topper (Rank 1)",
+    prize: "₹1,00,000",
+    awards: "National Winner's Trophy + Gold Medal",
+  },
+  {
+    rank: "Rank 2",
+    prize: "₹50,000",
+    awards: "Silver Medal",
+  },
+  {
+    rank: "Rank 3",
+    prize: "₹25,000",
+    awards: "Bronze Medal",
+  },
+  {
+    rank: "Rank 4-10",
+    prize: "₹5,000",
+    awards: "Merit & Appreciation Certificate",
+  },
+  {
+    rank: "Top 10%",
+    prize: "—",
+    awards: "Merit & Appreciation Certificates",
+  },
+];
 
-  const prestigeAwards = [
-    {
-      title: "National Olympiad Excellence School Award",
-      description: "Based on medals, scores, and overall student achievement"
-    },
-    {
-      title: "Best School Participation Award",
-      description: "Schools demonstrating exceptional participation and contribution toward AI literacy initiatives"
-    },
-    {
-      title: "Outstanding Academic Excellence Award",
-      description: "Consistent student achievement across multiple grades"
-    },
-    {
-      title: "Visionary Principal Award",
-      description: "For school heads who actively support Olympiad culture"
-    },
-    {
-      title: "Outstanding Institutional Coordinator Award",
-      description: "For exceptional coordination and leadership in Olympiad participation"
-    },
-  ];
+ const prestigeAwards = [
+  {
+    title: "National Olympiad Excellence School Award",
+    description:
+      "Presented to schools demonstrating exceptional student performance at the national level.",
+    icon: Trophy,
+    color: "from-amber-500 to-yellow-500",
+    bg: "bg-amber-50",
+  },
+  {
+    title: "Best School Participation Award",
+    description:
+      "Recognizes schools with outstanding student participation and engagement rates.",
+    icon: Medal,
+    color: "from-blue-500 to-indigo-600",
+    bg: "bg-blue-50",
+  },
+  {
+    title: "Outstanding Academic Excellence Award",
+    description:
+      "For schools producing top-ranked students in state and national standings.",
+    icon: Star,
+    color: "from-emerald-500 to-teal-600",
+    bg: "bg-emerald-50",
+  },
+  {
+    title: "Visionary Principal Award",
+    description:
+      "Celebrates school heads who champion AI literacy and future-ready education.",
+    icon: UserRound,
+    color: "from-violet-500 to-purple-600",
+    bg: "bg-violet-50",
+  },
+  {
+    title: "Outstanding Institutional Coordinator Award",
+    description:
+      "Honours coordinators who lead exceptional NAILO implementation within their schools.",
+    icon: Users,
+    color: "from-cyan-500 to-teal-600",
+    bg: "bg-cyan-50",
+  },
+];
 
   return (
     <section id="awards" className="relative py-20 lg:py-28 overflow-hidden">
@@ -132,10 +200,10 @@ export function Awards() {
             <div className="w-12 h-12 rounded-2xl bg-gradient-brand grid place-items-center shadow-soft shrink-0">
               <Award className="w-6 h-6 text-white" />
             </div>
-            <div>
-              <div className="font-bold text-lg">All Participants</div>
-              <p className="text-sm text-muted-foreground mt-1">Digital Certificate of Participation</p>
-            </div>
+            <div className="font-bold text-lg">All Participants</div>
+            <p className="text-sm text-muted-foreground mt-1">
+              Every registered participant receives an Official Digital Certificate of Participation.
+            </p>
           </div>
         </Reveal>
 
@@ -145,19 +213,39 @@ export function Awards() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-sm font-semibold text-blue-900 mb-6">
               <Crown className="w-4 h-4" /> Prestige Award Categories
             </div>
-            <div className="grid md:grid-cols-2 gap-5">
-              {prestigeAwards.map((award, i) => (
-                <div key={i} className="relative h-full rounded-3xl bg-white border border-border p-6 shadow-soft hover:shadow-glow hover:-translate-y-1 transition-all overflow-hidden">
-                  <div className="absolute -top-12 right-0 w-32 h-32 rounded-full bg-green-100 opacity-30 blur-2xl" />
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-green-600 grid place-items-center shadow-soft mb-4">
-                      <Star className="w-5 h-5 text-white" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {prestigeAwards.map((award, i) => {
+                const Icon = award.icon;
+
+                return (
+                  <div
+                    key={i}
+                    className="relative rounded-3xl border border-border bg-white p-6 shadow-soft hover:-translate-y-1 hover:shadow-xl transition-all"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div
+                        className={`w-14 h-14 rounded-2xl ${award.bg} grid place-items-center shrink-0`}
+                      >
+                        <div
+                          className={`w-10 h-10 rounded-xl bg-gradient-to-br ${award.color} grid place-items-center`}
+                        >
+                          <Icon className="w-5 h-5 text-white" />
+                        </div>
+                      </div>
+
+                      <div>
+                        <h3 className="font-bold leading-tight text-base">
+                          {award.title}
+                        </h3>
+
+                        <p className="text-sm text-muted-foreground mt-2 leading-6">
+                          {award.description}
+                        </p>
+                      </div>
                     </div>
-                    <div className="font-bold text-base leading-tight">{award.title}</div>
-                    <p className="text-sm text-muted-foreground mt-2">{award.description}</p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </Reveal>

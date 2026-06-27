@@ -25,7 +25,7 @@ const story = [
 ];
 
 const stats = [
-  { label: "Schools targeted", value: 5000, suffix: "+" },
+  { label: "Schools targeted", value: 2000, suffix: "+" },
   { label: "Cities reached", value: 250, suffix: "+" },
   { label: "Students inspired", value: 100000, suffix: "+" },
   { label: "AI literacy modules", value: 24, suffix: "" },

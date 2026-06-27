@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+
+type Page = "home" | "partners";
+
+type NavbarProps = {
+  currentPage: Page;
+  onNavigate: (page: Page) => void;
+};
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Syllabus", href: "#syllabus" },
-  { label: "Exam Structure", href: "#exam" },
-  { label: "Awards", href: "#awards" },
-  { label: "Advisory Board", href: "#advisory" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", page: "home" as const },
+  { label: "Partner Schools", page: "partners" as const },
 ];
 
-export function Navbar() {
+export function Navbar({ currentPage, onNavigate }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -24,6 +25,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleNavigate = (page: Page) => {
+    onNavigate(page);
+    setOpen(false);
+  };
+
   return (
     <header
       className={`sticky top-0 inset-x-0 z-50 transition-all duration-300 ${
@@ -33,36 +39,26 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-2 group">
-          {/* <img 
-            src="/NAILO_LOGO.png" 
-            alt="NAILO" 
-            className="h-8 w-auto"
-          /> */}
+        <button type="button" onClick={() => handleNavigate("home")} className="flex items-center gap-2 group">
           <div className="hidden sm:flex flex-col items-start leading-tight">
             <div className="text-sm font-bold tracking-tight">NAILO</div>
             <div className="text-[10px] text-muted-foreground -mt-0.5"></div>
           </div>
-          <div className="hidden lg:inline-flex items-center gap-2 ml-4 pl-4 border-l border-border">
-            {/* <span className="text-xs text-muted-foreground font-medium">by</span> */}
-            {/* <img 
-              src="/AFI_EDUTECH_LOGO.jpg" 
-              alt="AFI EduTech" 
-              className="h-10 w-auto"
-            /> */}
-          </div>
-        </a>
+        </button>
 
         <ul className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="relative px-4 py-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors group"
+            <li key={l.label}>
+              <button
+                type="button"
+                onClick={() => handleNavigate(l.page)}
+                className={`relative px-4 py-2 text-base font-semibold transition-colors group ${
+                  currentPage === l.page ? "text-blue-600" : "text-foreground hover:text-blue-600"
+                }`}
               >
                 {l.label}
                 <span className="absolute left-4 right-4 -bottom-0.5 h-1 bg-gradient-to-r from-blue-500 to-green-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-full" />
-              </a>
+              </button>
             </li>
           ))}
         </ul>
@@ -97,19 +93,23 @@ export function Navbar() {
           >
             <ul className="px-5 py-4 space-y-1">
               {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="block px-3 py-3 rounded-lg text-sm font-medium hover:bg-muted"
+                <li key={l.label}>
+                  <button
+                    type="button"
+                    onClick={() => handleNavigate(l.page)}
+                    className={`block w-full text-left px-3 py-3 rounded-lg text-sm font-medium hover:bg-muted ${
+                      currentPage === l.page ? "text-blue-600" : "text-foreground"
+                    }`}
                   >
                     {l.label}
-                  </a>
+                  </button>
                 </li>
               ))}
               <li className="pt-2">
                 <a
-                  href="#register"
+                  href="https://rzp.io/rzp/sKBaz3gm"
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={() => setOpen(false)}
                   className="block text-center px-5 py-3 rounded-full bg-gradient-brand text-white text-sm font-semibold shadow-glow"
                 >

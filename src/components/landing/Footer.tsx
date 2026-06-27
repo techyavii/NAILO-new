@@ -36,7 +36,7 @@ export function Footer() {
                   <img 
                     src="/NAILO_LOGO.png" 
                     alt="NAILO" 
-                    className="h-10 w-auto"
+                    className="h-20 w-auto"
                   />
                 </div>
                 <div className="text-lg font-bold text-foreground mt-2">NAILO</div>
@@ -49,7 +49,7 @@ export function Footer() {
                 <img 
                   src="/AFI_EDUTECH_LOGO.jpeg" 
                   alt="AFI EduTech" 
-                  className="h-8 w-auto ml-auto"
+                  className="h-12 w-auto ml-auto"
                 />
               </div>
             </div>

@@ -57,7 +57,7 @@ export function Platform() {
           })}
         </div>
 
-        <div className="mt-14 rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
+        {/* <div className="mt-14 rounded-3xl border border-blue-200 bg-white p-8 shadow-sm">
           <div className="text-sm font-semibold uppercase tracking-[0.24em] text-blue-600 mb-4">
             Platform partner
           </div>
@@ -69,7 +69,7 @@ export function Platform() {
               Pesofs.com powers the NAILO dashboard and online exam delivery, providing secure, reliable platform infrastructure for student assessment.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
