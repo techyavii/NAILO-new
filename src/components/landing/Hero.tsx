@@ -119,7 +119,7 @@ export function Hero() {
           </a>
 
           <a
-            href="#syllabus"
+            href="/syllabus"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white border-2 border-blue-200 text-blue-600 text-base font-bold hover:bg-blue-50 transition-all shadow-md hover:shadow-lg"
           >
             <Eye className="w-5 h-5" />

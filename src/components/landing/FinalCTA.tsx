@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Download, Eye, Sparkles } from "lucide-react";
 import { Reveal } from "./shared";
 
 export function FinalCTA() {
@@ -35,7 +35,7 @@ export function FinalCTA() {
                   href="#syllabus"
                   className="inline-flex items-center justify-center gap-2 px-10 py-5 rounded-2xl bg-white/20 backdrop-blur border-2 border-white text-white text-lg font-bold hover:bg-white/30 transition-all"
                 >
-                  <Download className="w-6 h-6" /> Download Syllabus
+                  <Eye className="w-6 h-6" /> View Syllabus
                 </a>
               </div>
               <p className="mt-10 text-sm text-white/80 font-medium">

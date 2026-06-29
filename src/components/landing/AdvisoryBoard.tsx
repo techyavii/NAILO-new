@@ -71,19 +71,19 @@ export function AdvisoryBoard() {
           ))}
         </div>
 
-        <div className="mt-14 rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-500 to-green-500 p-8 text-white shadow-xl">
+        {/* <div className="mt-14 rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-500 to-green-500 p-8 text-white shadow-xl">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-white/20 grid place-items-center text-white">
               <Award className="w-6 h-6" />
-            </div>
+            </div> */}
             {/* <div>
               <div className="text-lg font-bold">Platform partner</div>
               <div className="text-sm text-white/90 mt-1">
                 Pesofs.com is the official platform partner for NAILO's dashboard and exam delivery.
               </div>
             </div> */}
-          </div>
-        </div>
+          {/* </div>
+        </div> */}
       </div>
     </section>
   );

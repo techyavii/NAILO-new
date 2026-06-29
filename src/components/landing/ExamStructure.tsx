@@ -40,7 +40,7 @@ export function ExamStructure() {
         />
 
         <div className="mt-16 relative">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-5 lg:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-6">
             {steps.map((s, i) => {
               const col = stepColors[i % stepColors.length];
               return (

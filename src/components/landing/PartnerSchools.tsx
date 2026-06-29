@@ -1,59 +1,67 @@
-import { Mail, School, Sparkles } from "lucide-react";
+import { Mail, School, Users, Sparkles } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
+
+const points = [
+  "Create a future-ready AI learning culture in your school.",
+  "Bring national-level AI literacy exposure to students and educators.",
+  "Enable participation in a structured, student-friendly olympiad experience.",
+];
 
 export function PartnerSchools() {
   return (
-    <section className="relative py-20 lg:py-28 px-5 lg:px-8 bg-white">
-      <div className="mx-auto max-w-6xl rounded-[2rem] border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-emerald-50 p-8 md:p-10 lg:p-12 shadow-xl">
-        <Reveal>
-          <SectionHeader
-            eyebrow="Partner Schools"
-            title={
-              <>
-                Join the <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">NAILO school network</span>
-              </>
-            }
-            description="We are building a growing community of schools that want to make AI literacy a meaningful part of student learning."
-          />
-        </Reveal>
+    <section className="relative py-20 lg:py-28 px-5 lg:px-8">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeader
+          eyebrow="School partnership"
+          title={
+            <>
+              NAILO <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Partner Schools</span>
+            </>
+          }
+          description="Schools can join the NAILO movement by connecting with our team and discovering how AI literacy can be introduced in a meaningful way."
+        />
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <Reveal delay={0.08}>
-            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
-              <div className="inline-flex rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 p-3 text-white shadow-lg">
-                <School className="h-6 w-6" />
+        <div className="mt-14 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <Reveal>
+            <div className="rounded-[2rem] border border-blue-200 bg-white/80 p-8 shadow-sm">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 text-white shadow-md">
+                <School className="h-7 w-7" />
               </div>
-              <h3 className="mt-5 text-2xl font-bold text-slate-900">Partner with NAILO</h3>
-              <p className="mt-3 text-base leading-8 text-slate-600">
-                Schools can become part of the NAILO ecosystem to encourage AI awareness, national-level participation, and future-ready student development. We welcome institutions that believe in experiential learning and academic excellence.
+              <h3 className="mt-6 text-2xl font-bold text-foreground">Partner with NAILO</h3>
+              <p className="mt-4 text-lg leading-relaxed text-foreground/75">
+                If your school would like to know more about becoming a NAILO partner school, please contact us at our email address and our team will be happy to assist you.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <div className="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700">
-                  Curriculum-aligned opportunities
-                </div>
-                <div className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700">
-                  Student recognition & growth
-                </div>
+                <a
+                  href="mailto:support@nailolympiad.com"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-105"
+                >
+                  <Mail className="h-4 w-4" />
+                  support@nailolympiad.com
+                </a>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.12}>
-            <div className="rounded-3xl border border-slate-200 bg-slate-900 p-7 text-white shadow-sm">
-              <div className="inline-flex rounded-2xl bg-white/10 p-3 text-white">
-                <Mail className="h-6 w-6" />
+          <Reveal delay={0.08}>
+            <div className="rounded-[2rem] border border-green-200 bg-gradient-to-br from-green-50 to-blue-50 p-8 shadow-sm">
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-blue-600 shadow-sm">
+                  <Users className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-green-700">For schools</p>
+                  <h3 className="text-xl font-bold text-foreground">Why partner with us</h3>
+                </div>
               </div>
-              <h3 className="mt-5 text-2xl font-bold">Contact us to know more</h3>
-              <p className="mt-3 text-base leading-8 text-slate-300">
-                If your school would like to become a NAILO partner, reach out to us at the email below and our team will help you with the next steps.
-              </p>
-              <a
-                href="mailto:support@nailolympiad.com"
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500 px-5 py-3 font-semibold text-white transition-transform hover:scale-[1.02]"
-              >
-                <Sparkles className="h-4 w-4" />
-                support@nailolympiad.com
-              </a>
+              <ul className="mt-6 space-y-4">
+                {points.map((point) => (
+                  <li key={point} className="flex gap-3 rounded-2xl bg-white/70 p-4 text-sm font-medium text-foreground/80">
+                    <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
         </div>
