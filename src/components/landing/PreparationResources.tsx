@@ -35,7 +35,6 @@ export function PreparationResources() {
                   </>
                 }
                 description="Everything you need to prepare for the NAILO Olympiad"
-                className="mb-8 text-left"
               />
 
               <div className="space-y-4 mb-10">
