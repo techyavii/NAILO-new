@@ -1,7 +1,5 @@
 import {
-  Sparkles,
   Mail,
-  Phone,
   MapPin,
   Twitter,
   Instagram,
@@ -9,22 +7,64 @@ import {
   Youtube,
 } from "lucide-react";
 
+interface FooterProps {
+  onNavigate?: (path: string) => void;
+}
+
 const cols = [
   {
     title: "Olympiad",
-    links: ["About NAILO", "Syllabus", "Exam Structure", "Awards & Recognition", "Important Dates"],
+    links: [
+      { label: "About NAILO", href: "/about" },
+      { label: "Syllabus", href: "/syllabus" },
+      { label: "Exam Structure", href: "/exam" },
+      { label: "Awards & Recognition", href: "/awards" },
+      { label: "Important Dates", href: "/#important-dates" },
+    ],
   },
   {
     title: "Students",
-    links: ["Register", "Study Resources", "Sample Papers", "Results", "Dashboard"],
+    links: [
+      { label: "Register", href: "/#register" },
+      { label: "Study Resources", href: "/#resources" },
+      { label: "Sample Papers", href: "/#resources" },
+      { label: "Results", href: "/#register" },
+      { label: "Dashboard", href: "/#register" },
+    ],
   },
   {
     title: "Schools",
-    links: ["School Partnership", "Bulk Registration", "Educator Resources"],
+    links: [
+      { label: "School Partnership", href: "/partner-schools" },
+      { label: "Bulk Registration", href: "/#register" },
+      { label: "Educator Resources", href: "/contact" },
+    ],
   },
 ];
 
-export function Footer() {
+const socialLinks = [
+  { href: "https://x.com/", icon: Twitter, label: "Twitter" },
+  { href: "https://www.instagram.com/", icon: Instagram, label: "Instagram" },
+  { href: "https://www.linkedin.com/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://www.youtube.com/", icon: Youtube, label: "YouTube" },
+];
+
+export function Footer({ onNavigate }: FooterProps) {
+  const handleNavigate = (href: string) => {
+    if (onNavigate) {
+      onNavigate(href);
+      return;
+    }
+
+    if (href.startsWith("/")) {
+      window.history.pushState({}, "", href);
+      window.dispatchEvent(new Event("popstate"));
+      return;
+    }
+
+    window.location.assign(href);
+  };
+
   return (
     <footer id="contact" className="relative bg-gradient-to-b from-white to-blue-50 border-t-2 border-blue-200">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-20">
@@ -70,18 +110,20 @@ export function Footer() {
               </li>
             </ul>
 
-            <div className="mt-8 flex gap-3">
-              {[Twitter, Instagram, Linkedin, Youtube].map((Icon, i) => (
+            {/* <div className="mt-8 flex gap-3">
+              {socialLinks.map(({ href, icon: Icon, label }) => (
                 <a
-                  key={i}
-                  href="#"
-                  aria-label="social"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
                   className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500 to-green-500 hover:shadow-lg grid place-items-center transition-all hover:scale-110 text-white"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div className="lg:col-span-8 grid sm:grid-cols-3 gap-8 lg:gap-12">
@@ -90,12 +132,18 @@ export function Footer() {
                 <div className="text-lg font-bold text-foreground mb-5">{c.title}</div>
                 <ul className="space-y-3">
                   {c.links.map((l) => (
-                    <li key={l}>
+                    <li key={l.label}>
                       <a
-                        href="#"
+                        href={l.href}
+                        onClick={(event) => {
+                          if (l.href.startsWith("/")) {
+                            event.preventDefault();
+                            handleNavigate(l.href);
+                          }
+                        }}
                         className="text-base text-foreground/75 hover:text-blue-600 transition-colors font-medium"
                       >
-                        {l}
+                        {l.label}
                       </a>
                     </li>
                   ))}
@@ -110,13 +158,13 @@ export function Footer() {
             © {new Date().getFullYear()} NAILO · AFI EduTech. All rights reserved.
           </div>
           <div className="flex gap-6 font-medium">
-            <a href="#" className="text-foreground/70 hover:text-blue-600 transition-colors">
+            <a href="/faqs" onClick={(event) => { event.preventDefault(); handleNavigate("/faqs"); }} className="text-foreground/70 hover:text-blue-600 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-foreground/70 hover:text-blue-600 transition-colors">
+            <a href="/contact" onClick={(event) => { event.preventDefault(); handleNavigate("/contact"); }} className="text-foreground/70 hover:text-blue-600 transition-colors">
               Terms
             </a>
-            <a href="#" className="text-foreground/70 hover:text-blue-600 transition-colors">
+            <a href="/contact" onClick={(event) => { event.preventDefault(); handleNavigate("/contact"); }} className="text-foreground/70 hover:text-blue-600 transition-colors">
               Code of Conduct
             </a>
           </div>

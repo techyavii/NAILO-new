@@ -21,7 +21,7 @@ export function ImportantDates() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 px-5 lg:px-8">
+    <section id="important-dates" className="relative py-20 lg:py-32 px-5 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Important dates"

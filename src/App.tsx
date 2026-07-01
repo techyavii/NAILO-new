@@ -116,7 +116,7 @@ function Index() {
       <ConferenceBanner />
       <Navbar currentPath={currentPath} onNavigate={navigateTo} />
       <main>{page}</main>
-      <Footer />
+      <Footer onNavigate={navigateTo} />
     </div>
   );
 }

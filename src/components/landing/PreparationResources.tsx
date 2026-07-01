@@ -20,7 +20,7 @@ export function PreparationResources() {
   };
 
   return (
-    <section className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-white via-blue-50 to-white">
+    <section id="resources" className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-white via-blue-50 to-white">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
