@@ -5,13 +5,13 @@ const boards = ["CBSE", "ICSE", "State Boards", "International Boards"];
 
 export function Eligibility() {
   return (
-    <section className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+    <section className="relative bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_100%)] px-5 py-20 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Eligibility"
           title={
             <>
-              Who can <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">participate</span>
+              Who can <span className="text-blue-700">participate</span>
             </>
           }
           description="NAILO is open to every school student in India, across two age-appropriate divisions."
@@ -39,11 +39,10 @@ export function Eligibility() {
             },
           ].map((g, i) => (
             <Reveal key={g.tag} delay={i * 0.1}>
-              <div className={`relative h-full rounded-3xl border-2 p-10 ${g.bgColor} ${g.borderColor} hover:shadow-lg hover:-translate-y-2 transition-all overflow-hidden`}>
-                <div className={`absolute -top-16 -right-16 w-56 h-56 rounded-full bg-gradient-to-br ${g.color} opacity-10 blur-2xl`} />
+              <div className={`relative h-full overflow-hidden rounded-[1.5rem] border bg-white p-10 shadow-sm transition hover:-translate-y-1 hover:shadow-md ${g.borderColor}`}>
                 <div className="relative">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${g.color} grid place-items-center shadow-lg mb-6`}>
-                    <g.icon className="w-8 h-8 text-white" />
+                  <div className={`mb-6 grid h-14 w-14 place-items-center rounded-2xl ${g.color} text-white shadow-sm`}>
+                    <g.icon className="w-8 h-8 text-black" />
                   </div>
                   <div className="text-sm font-bold uppercase tracking-widest text-foreground/70 mb-2">
                     {g.tag}
@@ -57,10 +56,10 @@ export function Eligibility() {
         </div>
 
         <Reveal delay={0.2}>
-          <div className="mt-12 rounded-3xl bg-gradient-to-r from-blue-50 to-green-50 border-2 border-blue-300 p-10 lg:p-12 hover:shadow-lg transition-all">
+          <div className="mt-12 rounded-[1.5rem] border border-slate-200 bg-white p-10 shadow-sm lg:p-12">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
               <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 grid place-items-center shadow-lg shrink-0">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-sm">
                   <BookOpenCheck className="w-7 h-7 text-white" />
                 </div>
                 <div>
@@ -74,7 +73,7 @@ export function Eligibility() {
                 {boards.map((b) => (
                   <span
                     key={b}
-                    className="px-5 py-3 rounded-2xl bg-white border-2 border-blue-200 text-base font-bold text-blue-700 hover:bg-blue-50 transition-all"
+                    className="rounded-full border border-slate-200 bg-slate-50 px-5 py-3 text-base font-semibold text-slate-700"
                   >
                     {b}
                   </span>

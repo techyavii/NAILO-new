@@ -32,16 +32,8 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-32 lg:pt-16 pb-20 lg:pb-28 overflow-hidden"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#fcfeff_0%,#f7fbff_100%)] px-5 py-20 lg:px-8 lg:py-28"
     >
-      {/* Background Gradient Blobs */}
-      <div className="blob w-[520px] h-[520px] -top-32 -left-32 bg-blue-300/40" />
-      <div className="blob w-[460px] h-[460px] top-20 -right-20 bg-green-300/40 animate-float-slow" />
-      <div className="blob w-[360px] h-[360px] bottom-0 left-1/3 bg-purple-300/30" />
-
-      {/* Floating Shapes */}
-      <div className="absolute top-32 left-10 w-16 h-16 rounded-full bg-yellow-200/60 blur-2xl" />
-      <div className="absolute bottom-20 right-10 w-24 h-24 rounded-full bg-pink-200/50 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
         {/* Top Badge */}
@@ -49,7 +41,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-50 border border-blue-200 text-sm font-semibold text-blue-700 mb-8 shadow-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm mb-8"
         >
           <Sparkles className="w-4 h-4" />
           🇮🇳 India's First National AI Literacy Olympiad
@@ -68,10 +60,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mx-auto"
+          className="mx-auto text-5xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-6xl lg:text-7xl"
         >
           National AI Literacy{" "}
-          <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-green-500 bg-clip-text text-transparent">
+          <span className="text-blue-700">
             Olympiad
           </span>
           <span className="block text-5xl sm:text-6xl mt-4">
@@ -84,11 +76,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mt-8 text-xl lg:text-2xl text-foreground/75 max-w-3xl mx-auto font-medium leading-relaxed"
+          className="mx-auto mt-8 max-w-3xl text-xl font-medium leading-relaxed text-slate-600 lg:text-2xl"
         >
           The National Assessment for Computational Thinking &
           Artificial Intelligence Literacy
-          <span className="block mt-3 text-foreground font-bold">
+          <span className="mt-3 block font-semibold text-slate-900">
             Empowering the next generation of digital thinkers
           </span>
         </motion.p>
@@ -98,7 +90,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-8 inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 text-base font-semibold text-green-700 mx-auto shadow-sm"
+          className="mx-auto mt-8 inline-flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 text-base font-semibold text-slate-700 shadow-sm"
         >
           <CheckCircle2 className="w-5 h-5" />
           No coding required. Just logic, creativity & curiosity
@@ -115,7 +107,7 @@ export function Hero() {
             href="https://rzp.io/rzp/sKBaz3gm"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all"
+            className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700"
           >
             🚀 Register Now ₹399
             <ArrowRight className="w-5 h-5" />
@@ -123,7 +115,7 @@ export function Hero() {
 
           <a
             href="/syllabus"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white border-2 border-blue-200 text-blue-600 text-base font-bold hover:bg-blue-50 transition-all shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-8 py-4 text-base font-semibold text-slate-700 shadow-sm transition hover:border-blue-300 hover:text-blue-700"
           >
             <Eye className="w-5 h-5" />
             View Syllabus
@@ -133,7 +125,7 @@ export function Hero() {
             href="https://rzp.io/rzp/sKBaz3gm"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-green-50 border-2 border-green-200 text-green-700 text-base font-bold hover:bg-green-100 transition-all shadow-md hover:shadow-lg"
+            className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-8 py-4 text-base font-semibold text-slate-700 shadow-sm transition hover:bg-white"
           >
             <PlayCircle className="w-5 h-5" />
             Explore the platform
@@ -150,7 +142,7 @@ export function Hero() {
           {features.map((item) => (
             <div
               key={item}
-              className="px-5 py-3 rounded-2xl bg-white/80 backdrop-blur border border-blue-100 shadow-sm text-sm font-semibold text-foreground/80 hover:scale-105 hover:shadow-md transition-all"
+              className="rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-700"
             >
               {item}
             </div>
@@ -167,7 +159,7 @@ export function Hero() {
           {badges.map((b) => (
             <span
               key={b}
-              className="text-sm font-semibold px-4 py-2 rounded-xl bg-gradient-to-r from-yellow-100 to-yellow-50 border-2 border-yellow-300 text-yellow-800 shadow-sm"
+              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm"
             >
               ⭐ {b}
             </span>

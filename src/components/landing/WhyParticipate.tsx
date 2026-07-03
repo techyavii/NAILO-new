@@ -45,12 +45,12 @@ const items = [
 
 export function WhyParticipate() {
   const colors = [
-    { bg: "bg-blue-50", border: "border-blue-300", icon: "from-blue-500 to-blue-600" },
-    { bg: "bg-green-50", border: "border-green-300", icon: "from-green-500 to-green-600" },
-    { bg: "bg-purple-50", border: "border-purple-300", icon: "from-purple-500 to-purple-600" },
-    { bg: "bg-yellow-50", border: "border-yellow-300", icon: "from-yellow-500 to-yellow-600" },
-    { bg: "bg-pink-50", border: "border-pink-300", icon: "from-pink-500 to-pink-600" },
-    { bg: "bg-indigo-50", border: "border-indigo-300", icon: "from-indigo-500 to-indigo-600" },
+    { bg: "bg-white", border: "border-slate-200", icon: "bg-blue-600" },
+    { bg: "bg-white", border: "border-slate-200", icon: "bg-orange-500" },
+    { bg: "bg-white", border: "border-slate-200", icon: "bg-slate-700" },
+    { bg: "bg-white", border: "border-slate-200", icon: "bg-blue-500" },
+    { bg: "bg-white", border: "border-slate-200", icon: "bg-amber-500" },
+    { bg: "bg-white", border: "border-slate-200", icon: "bg-slate-600" },
   ];
 
   return (
@@ -61,7 +61,7 @@ export function WhyParticipate() {
           title={
             <>
               Six reasons NAILO is{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">UNMISSABLE</span>
+              <span className="text-blue-700">UNMISSABLE</span>
             </>
           }
           description="A single Olympiad that recognises talent, builds skill and shapes the way young Indians think about AI."
@@ -72,8 +72,8 @@ export function WhyParticipate() {
             const col = colors[i];
             return (
               <Reveal key={it.title} delay={i * 0.05}>
-                <div className={`group relative h-full rounded-3xl border-2 p-8 lg:p-9 ${col.bg} ${col.border} hover:shadow-lg hover:-translate-y-2 transition-all ${it.span ?? ""}`}>
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${col.icon} grid place-items-center shadow-lg mb-5 group-hover:scale-110 transition-transform`}>
+                <div className={`group relative h-full rounded-[1.5rem] border p-8 lg:p-9 ${col.bg} ${col.border} shadow-sm transition hover:-translate-y-1 hover:shadow-md ${it.span ?? ""}`}>
+                  <div className={`mb-5 grid h-14 w-14 place-items-center rounded-2xl ${col.icon} text-white shadow-sm transition group-hover:scale-105`}>
                     <it.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-3">{it.title}</h3>

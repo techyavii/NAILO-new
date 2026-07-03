@@ -78,14 +78,14 @@ export function HomeHighlights() {
           eyebrow="NEP 2020 Alignment"
           title={
             <>
-              How NAILO aligns with <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">NEP 2020</span>
+              How NAILO aligns with <span className="text-blue-700">NEP 2020</span>
             </>
           }
           description="Transforming NEP goals into practical AI literacy outcomes for students across India."
         />
 
         <div className="mt-14 overflow-x-auto">
-          <table className="w-full min-w-[700px] divide-y divide-gray-200">
+          <table className="w-full min-w-[700px] divide-y divide-slate-200 rounded-[1.5rem] border border-slate-200 bg-white shadow-sm">
             <thead>
               <tr>
                 <th className="text-left py-3 px-4 text-sm font-semibold text-foreground/90">NEP Goal</th>
@@ -100,7 +100,7 @@ export function HomeHighlights() {
                   <tr key={item.title} className="align-top">
                     <td className="py-4 px-4">
                       <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-green-500 text-white">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-blue-700">
                           <Icon className="h-5 w-5" />
                         </div>
                         <div>
@@ -118,7 +118,7 @@ export function HomeHighlights() {
         </div>
 
         <Reveal delay={0.16}>
-          <div className="mt-10 rounded-[2rem] border border-blue-200 bg-gradient-to-r from-blue-50 via-white to-green-50 p-8 lg:p-10 shadow-sm">
+          <div className="mt-10 rounded-[1.75rem] border border-slate-200 bg-white p-8 shadow-sm lg:p-10">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">Key Outcome</p>
@@ -128,7 +128,7 @@ export function HomeHighlights() {
               </div>
               <a
                 href="/partner-schools"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:scale-105 w-lg"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 w-lg"
               >
                 Explore Partner Schools
                 <ArrowRight className="h-4 w-4" />

@@ -42,19 +42,19 @@ export function SectionHeader({
     >
       {eyebrow && (
         <Reveal>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 border-2 border-blue-300 text-sm font-bold text-blue-700 mb-6">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm mb-6">
             ✨ {eyebrow}
           </div>
         </Reveal>
       )}
       <Reveal delay={0.05}>
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight text-slate-900">
           {title}
         </h2>
       </Reveal>
       {description && (
         <Reveal delay={0.1}>
-          <p className="mt-6 text-lg sm:text-xl text-foreground/75 font-medium leading-relaxed">
+          <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed">
             {description}
           </p>
         </Reveal>
