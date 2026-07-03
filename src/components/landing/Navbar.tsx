@@ -14,6 +14,7 @@ const links = [
   { label: "Exam Structure", href: "/exam" },
   { label: "Awards", href: "/awards" },
   { label: "Partner Schools", href: "/partner-schools" },
+   { label: "Advisory Board", href: "/advisory-board" },
   { label: "FAQs", href: "/faqs" },
   // { label: "Contact", href: "/contact" },
 ];
@@ -59,7 +60,7 @@ export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
             className="h-8 w-auto"
           /> */}
           <div className="hidden sm:flex flex-col items-start leading-tight">
-            <div className="text-sm font-bold tracking-tight">NAILO</div>
+            {/* <div className="text-sm font-bold tracking-tight">NAILO</div> */}
             <div className="text-[10px] text-muted-foreground -mt-0.5"></div>
           </div>
           <div className="hidden lg:inline-flex items-center gap-2 ml-4 pl-4 border-l border-border">

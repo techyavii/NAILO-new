@@ -18,7 +18,7 @@ const ConferenceBanner = () => {
         <div className="flex items-center gap-2 lg:flex-row flex-col">
           <div className="p-2 rounded-lg shadow-md bg-white">
             <img
-              src="/banner.png"
+              src="images/banner.png"
               alt="NAILO Logo"
               className="h-24 md:h-24 w-auto"
             />

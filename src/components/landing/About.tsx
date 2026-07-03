@@ -1,5 +1,6 @@
 import { Building2, Lightbulb, Network, Sparkles } from "lucide-react";
 import { Counter, Reveal, SectionHeader } from "./shared";
+import { VisionMission } from "./VisionMission";
 
 const story = [
   {
@@ -109,6 +110,7 @@ export function About() {
           </Reveal>
         </div>
       </div>
+      <VisionMission />
     </section>
   );
 }

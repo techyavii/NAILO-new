@@ -26,19 +26,19 @@ function HomePage() {
     <>
       <Hero />
       <FeatureStrip />
+      <StudentJourney />
       <HomeHighlights />
-      <VisionMission />
       {/* <About /> */}
       <WhyParticipate />
       <Eligibility />
       {/* <ExamStructure /> */}
       {/* <Syllabus /> */}
       {/* <Awards /> */}
-      <AdvisoryBoard />
+      {/* <AdvisoryBoard /> */}
       <ImportantDates />
-      <StudentJourney />
+
       <PreparationResources />
-      <Platform />
+      {/* <Platform /> */}
       {/* <FAQ /> */}
       <FinalCTA />
     </>
@@ -106,6 +106,8 @@ function Index() {
         return <SectionPage><FinalCTA /></SectionPage>;
       case "/partner-schools":
         return <PartnerSchoolsPage />;
+      case "/advisory-board":
+        return <AdvisoryBoard />;
       default:
         return <HomePage />;
     }
