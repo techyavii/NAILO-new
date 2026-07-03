@@ -2,6 +2,7 @@ import React from 'react';
 import { Calendar, Globe } from 'lucide-react';
 
 const ConferenceBanner = () => {
+  
   return (
     <div 
       className="w-full bg-cover bg-center py-8 relative " 
@@ -19,7 +20,7 @@ const ConferenceBanner = () => {
             <img
               src="/banner.png"
               alt="NAILO Logo"
-              className="h-20 md:h-20 w-auto"
+              className="h-24 md:h-24 w-auto"
             />
           </div>
         </div>
@@ -59,17 +60,3 @@ const ConferenceBanner = () => {
 };
 
 export default ConferenceBanner;
-
-// const ConferenceBanner = () => {
-//   return (
-//     <section className="w-full overflow-hidden">
-//       <img
-//         src="/banner.png"
-//         alt="NAILO Banner"
-//         className="w-full h-[250px] md:h-[320px] lg:h-[320px] object-fill"
-//       />
-//     </section>
-//   );
-// };
-
-// export default ConferenceBanner;

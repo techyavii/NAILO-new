@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   Eye,
 } from "lucide-react";
+import ImageCarousel from "./ImageCarousel";
 
 const badges = [
   "NEP 2020 Aligned",
@@ -22,6 +23,12 @@ const features = [
 ];
 
 export function Hero() {
+  const carouselImages = [
+    { src: "/images/banner.png", alt: "University of Essex Campus" },
+    { src: "/images/banner2.jpeg", alt: "University of Essex Building" },
+    { src: "/images/banner3.jpeg", alt: "University of Essex Entrance" },
+    { src: "/images/banner4.jpeg", alt: "Aerial view of University of Essex" },
+  ];
   return (
     <section
       id="home"
@@ -53,11 +60,7 @@ export function Hero() {
   transition={{ duration: 0.5 }}
   className="flex justify-center mb-10"
 >
-  <img
-    src="/banner.png"
-    alt="NAILO Logo"
-    className="w-full max-w-3xl h-auto object-contain"
-  />
+  <ImageCarousel images={carouselImages} />
 </motion.div>
 
         {/* Heading */}

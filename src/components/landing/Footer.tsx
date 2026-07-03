@@ -27,17 +27,17 @@ const cols = [
     links: [
       { label: "Register", href: "/#register" },
       { label: "Study Resources", href: "/#resources" },
-      { label: "Sample Papers", href: "/#resources" },
-      { label: "Results", href: "/#register" },
-      { label: "Dashboard", href: "/#register" },
+      // { label: "Sample Papers", href: "/#resources" },
+      // { label: "Results", href: "/#register" },
+      // { label: "Dashboard", href: "/#register" },
     ],
   },
   {
     title: "Schools",
     links: [
       { label: "School Partnership", href: "/partner-schools" },
-      { label: "Bulk Registration", href: "/#register" },
-      { label: "Educator Resources", href: "/contact" },
+      // { label: "Bulk Registration", href: "/#register" },
+      // { label: "Educator Resources", href: "/contact" },
     ],
   },
 ];
@@ -157,7 +157,7 @@ export function Footer({ onNavigate }: FooterProps) {
           <div className="text-foreground/70 font-medium">
             © {new Date().getFullYear()} NAILO · AFI EduTech. All rights reserved.
           </div>
-          <div className="flex gap-6 font-medium">
+          {/* <div className="flex gap-6 font-medium">
             <a href="/faqs" onClick={(event) => { event.preventDefault(); handleNavigate("/faqs"); }} className="text-foreground/70 hover:text-blue-600 transition-colors">
               Privacy Policy
             </a>
@@ -167,7 +167,7 @@ export function Footer({ onNavigate }: FooterProps) {
             <a href="/contact" onClick={(event) => { event.preventDefault(); handleNavigate("/contact"); }} className="text-foreground/70 hover:text-blue-600 transition-colors">
               Code of Conduct
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
