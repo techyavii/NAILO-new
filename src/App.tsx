@@ -115,7 +115,7 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <ConferenceBanner />
+      {/* <ConferenceBanner /> */}
       <Navbar currentPath={currentPath} onNavigate={navigateTo} />
       <main>{page}</main>
       <Footer onNavigate={navigateTo} />

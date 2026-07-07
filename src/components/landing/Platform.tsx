@@ -28,7 +28,7 @@ export function Platform() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-white to-green-50">
+    <section className="relative py-16 lg:py-24 px-5 lg:px-8 bg-gradient-to-b from-white to-green-50">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Platform features"

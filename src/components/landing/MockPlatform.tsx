@@ -10,7 +10,7 @@ import { Reveal, SectionHeader } from "./shared";
 
 export function MockPlatform() {
   return (
-    <section id="mock" className="relative py-20 lg:py-32 px-5 lg:px-8 overflow-hidden">
+    <section id="mock" className="relative py-16 lg:py-24 px-5 lg:px-8 overflow-hidden">
       <div className="blob w-[420px] h-[420px] -top-10 -left-20 bg-blue-200/40" />
       <div className="mx-auto max-w-7xl relative">
         <SectionHeader

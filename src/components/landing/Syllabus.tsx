@@ -106,7 +106,7 @@ export function Syllabus() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="syllabus" className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+    <section id="syllabus" className="relative py-16 lg:py-24 px-5 lg:px-8 bg-gradient-to-b from-white to-blue-50">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Syllabus"

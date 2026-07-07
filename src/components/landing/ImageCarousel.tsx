@@ -44,11 +44,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
             {images.map((image, index) => (
               <CarouselItem key={index} className="basis-full">
                 <div className="p-1">
-                  <div className="mx-auto overflow-hidden rounded-lg shadow-lg h-96 relative">
+                  <div className="mx-auto relative flex h-[260px] items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-lg sm:h-80 md:h-96 lg:h-[420px]">
                     <img 
                       src={image.src} 
                       alt={image.alt} 
-                      className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-105"
+                      className="h-full w-full max-w-full max-h-full object-contain object-center transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                 </div>

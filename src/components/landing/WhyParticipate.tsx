@@ -54,7 +54,7 @@ export function WhyParticipate() {
   ];
 
   return (
-    <section className="relative py-20 lg:py-32 px-5 lg:px-8">
+    <section className="relative py-16 lg:py-24 px-5 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Why participate"

@@ -36,7 +36,7 @@ const members = [
 
 export function AdvisoryBoard() {
   return (
-    <section id="advisory" className="relative py-20 lg:py-32 px-5 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+    <section id="advisory" className="relative py-16 lg:py-24 px-5 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Advisory board"

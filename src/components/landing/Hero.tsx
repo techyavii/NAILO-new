@@ -6,6 +6,7 @@ import {
   Sparkles,
   CheckCircle2,
   Eye,
+  School,
 } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
 
@@ -32,7 +33,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fcfeff_0%,#f7fbff_100%)] px-5 py-20 lg:px-8 lg:py-28"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#fcfeff_0%,#f7fbff_100%)] px-5 py-16 lg:px-8 lg:py-24"
     >
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
@@ -41,19 +42,19 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm mb-8"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm mb-6"
         >
           <Sparkles className="w-4 h-4" />
           🇮🇳 India's First National AI Literacy Olympiad
         </motion.div>
         <motion.div
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5 }}
-  className="flex justify-center mb-10"
->
-  <ImageCarousel images={carouselImages} />
-</motion.div>
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-center mb-8"
+        >
+          <ImageCarousel images={carouselImages} />
+        </motion.div>
 
         {/* Heading */}
         <motion.h1
@@ -71,12 +72,21 @@ export function Hero() {
           </span>
         </motion.h1>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="mx-auto mt-6 inline-flex items-center justify-center gap-3 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg sm:text-base"
+        >
+          🎉 ₹3 Lakh+ Prize Pool | Win cash awards, trophies, and national recognition
+        </motion.div>
+
         {/* Subtext */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mx-auto mt-8 max-w-3xl text-xl font-medium leading-relaxed text-slate-600 lg:text-2xl"
+          className="mx-auto mt-6 max-w-3xl text-xl font-medium leading-relaxed text-slate-600 lg:text-2xl"
         >
           The National Assessment for Computational Thinking &
           Artificial Intelligence Literacy
@@ -90,7 +100,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="mx-auto mt-8 inline-flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 text-base font-semibold text-slate-700 shadow-sm"
+          className="mx-auto mt-6 inline-flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 py-4 text-base font-semibold text-slate-700 shadow-sm"
         >
           <CheckCircle2 className="w-5 h-5" />
           No coding required. Just logic, creativity & curiosity
@@ -101,7 +111,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
-          className="mt-12 flex flex-wrap justify-center gap-4"
+          className="mt-10 flex flex-wrap justify-center gap-4"
         >
           <a
             href="https://rzp.io/rzp/sKBaz3gm"
@@ -114,6 +124,16 @@ export function Hero() {
           </a>
 
           <a
+            href="https://forms.gle/9HxrA5zhMAnMp7oE6"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-8 py-4 text-base font-semibold text-slate-700 shadow-sm transition hover:bg-white"
+          >
+            <School className="w-5 h-5" />
+            Register Your School
+          </a>
+
+          <a
             href="/syllabus"
             className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-8 py-4 text-base font-semibold text-slate-700 shadow-sm transition hover:border-blue-300 hover:text-blue-700"
           >
@@ -121,15 +141,6 @@ export function Hero() {
             View Syllabus
           </a>
 
-          <a
-            href="https://rzp.io/rzp/sKBaz3gm"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-8 py-4 text-base font-semibold text-slate-700 shadow-sm transition hover:bg-white"
-          >
-            <PlayCircle className="w-5 h-5" />
-            Explore the platform
-          </a>
         </motion.div>
 
         {/* Child-Friendly Feature Cards */}
@@ -137,7 +148,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
-          className="mt-14 flex justify-center gap-5 flex-wrap"
+          className="mt-10 flex justify-center gap-5 flex-wrap"
         >
           {features.map((item) => (
             <div
@@ -154,7 +165,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.55 }}
-          className="mt-12 flex flex-wrap justify-center gap-3"
+          className="mt-10 flex flex-wrap justify-center gap-3"
         >
           {badges.map((b) => (
             <span

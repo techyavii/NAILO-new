@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface NavbarProps {
   currentPath?: string;
@@ -10,13 +16,17 @@ interface NavbarProps {
 const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Awards", href: "/awards" },
+  { label: "FAQs", href: "/faqs" },
+];
+const SyllabusLinks = [
   { label: "Syllabus", href: "/syllabus" },
   { label: "Exam Structure", href: "/exam" },
-  { label: "Awards", href: "/awards" },
+];
+
+const moreLinks = [
   { label: "Partner Schools", href: "/partner-schools" },
-   { label: "Advisory Board", href: "/advisory-board" },
-  { label: "FAQs", href: "/faqs" },
-  // { label: "Contact", href: "/contact" },
+  { label: "Advisory Board", href: "/advisory-board" },
 ];
 
 export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
@@ -45,35 +55,26 @@ export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-5 lg:px-8 h-16 flex items-center justify-between">
+      <nav className="mx-auto max-w-7xl px-5 lg:px-8 lg:py-12 h-20 flex items-center justify-between">
         <a
           href="/"
           onClick={(event) => {
             event.preventDefault();
             handleNavigate("/");
           }}
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-3 group"
         >
-          {/* <img 
-            src="/NAILO_LOGO.png" 
-            alt="NAILO" 
-            className="h-8 w-auto"
-          /> */}
-          <div className="hidden sm:flex flex-col items-start leading-tight">
-            {/* <div className="text-sm font-bold tracking-tight">NAILO</div> */}
-            <div className="text-[10px] text-muted-foreground -mt-0.5"></div>
-          </div>
-          <div className="hidden lg:inline-flex items-center gap-2 ml-4 pl-4 border-l border-border">
-            {/* <span className="text-xs text-muted-foreground font-medium">by</span> */}
-            {/* <img 
-              src="/AFI_EDUTECH_LOGO.jpg" 
-              alt="AFI EduTech" 
-              className="h-10 w-auto"
-            /> */}
-          </div>
+          <img
+            src="/NAILO_LOGO.png"
+            alt="NAILO"
+            className="h-32 w-auto"
+          />
+          {/* <div className="hidden sm:flex flex-col leading-tight">
+            <span className="text-base font-bold tracking-tight text-foreground">NAILO</span>
+          </div> */}
         </a>
 
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-3">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -89,9 +90,77 @@ export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
               </a>
             </li>
           ))}
+
+          <li>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors"
+                >
+                  Syllabus
+                  <span className="text-sm text-slate-400">▾</span>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                {SyllabusLinks.map((l) => (
+                  <DropdownMenuItem key={l.href} asChild>
+                    <a
+                      href={l.href}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleNavigate(l.href);
+                      }}
+                      className="block w-full"
+                    >
+                      {l.label}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </li>
+
+          <li>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors"
+                >
+                  More
+                  <span className="text-sm text-slate-400">▾</span>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                {moreLinks.map((l) => (
+                  <DropdownMenuItem key={l.href} asChild>
+                    <a
+                      href={l.href}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        handleNavigate(l.href);
+                      }}
+                      className="block w-full"
+                    >
+                      {l.label}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </li>
         </ul>
 
         <div className="hidden lg:flex items-center gap-3">
+          <a
+            href="https://forms.gle/9HxrA5zhMAnMp7oE6"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base font-semibold text-slate-700 shadow-sm transition hover:bg-white"
+          >
+            Register Your School
+          </a>
           <a
             href="https://rzp.io/rzp/sKBaz3gm"
             target="_blank"
@@ -134,16 +203,48 @@ export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
                   </a>
                 </li>
               ))}
+              <li className="pt-3 pb-1">
+                <div className="text-xs uppercase tracking-[0.24em] text-slate-500 px-3 pb-2">Syllabus</div>
+              </li>
+              {SyllabusLinks.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      handleNavigate(l.href);
+                    }}
+                    className="block px-3 py-3 rounded-lg text-sm font-medium hover:bg-muted"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+              <li className="pt-3 pb-1">
+                <div className="text-xs uppercase tracking-[0.24em] text-slate-500 px-3 pb-2">More</div>
+              </li>
+              {moreLinks.map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      handleNavigate(l.href);
+                    }}
+                    className="block px-3 py-3 rounded-lg text-sm font-medium hover:bg-muted"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
               <li className="pt-2">
                 <a
-                  href="/"
-                  onClick={(event) => {
-                    event.preventDefault();
-                    handleNavigate("/");
-                  }}
-                  className="block text-center px-5 py-3 rounded-full bg-gradient-brand text-white text-sm font-semibold shadow-glow"
+                  href="https://forms.gle/9HxrA5zhMAnMp7oE6"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-center px-5 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold shadow-glow"
                 >
-                  Register Now
+                  Register Your School
                 </a>
               </li>
             </ul>
