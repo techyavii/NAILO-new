@@ -33,7 +33,7 @@ const faqs = [
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section id="faqs" className="relative py-16 lg:py-24 px-5 lg:px-8 bg-gradient-to-b from-white to-blue-50">
+    <section id="faqs" className="relative py-5 px-5 lg:px-8 bg-gradient-to-b from-white to-blue-50">
       <div className="mx-auto max-w-5xl">
         <SectionHeader
           eyebrow="FAQs"

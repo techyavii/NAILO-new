@@ -9,7 +9,7 @@ const points = [
 
 export function PartnerSchools() {
   return (
-    <section className="relative py-16 lg:py-24 px-5 lg:px-8">
+    <section className="relative py-16 px-5 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="School partnership"

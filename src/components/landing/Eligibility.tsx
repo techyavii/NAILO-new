@@ -5,7 +5,7 @@ const boards = ["CBSE", "ICSE", "State Boards", "International Boards","Other Re
 
 export function Eligibility() {
   return (
-    <section className="relative bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_100%)] px-5 py-20 lg:px-8 lg:py-32">
+    <section className="relative bg-[linear-gradient(180deg,#f8fbff_0%,#ffffff_100%)] px-5 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Eligibility"

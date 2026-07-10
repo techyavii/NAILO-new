@@ -19,7 +19,7 @@ const features = [
 
 export function FeatureStrip() {
   return (
-    <section className="relative py-16 lg:py-24 px-5 lg:px-8">
+    <section className="relative py-16 px-5 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-5">
           {features.map((f, i) => (
