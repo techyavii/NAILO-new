@@ -20,7 +20,7 @@ export function FinalCTA() {
               </h2>
               <p className="mx-auto mb-12 max-w-3xl text-lg font-medium leading-relaxed text-slate-600 sm:text-xl">
                 Join thousands of students on a year-long journey to master computational thinking, 
-                win national recognition, and shape India's digital future.
+                win national recognition and shape India's digital future.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center flex-wrap">
                 <a

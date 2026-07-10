@@ -5,7 +5,7 @@ const nepHighlights = [
   {
     icon: Brain,
     title: "Digital Literacy",
-    contributes: "Introduces AI fundamentals, data literacy, and responsible technology use.",
+    contributes: "Introduces AI fundamentals, data literacy and responsible technology use.",
     impact: "Builds AI awareness and digital competence.",
   },
   {
@@ -23,25 +23,25 @@ const nepHighlights = [
   {
     icon: GraduationCap,
     title: "21st-Century Skills",
-    contributes: "Develops creativity, communication, collaboration, and computational thinking.",
+    contributes: "Develops creativity, communication, collaboration and computational thinking.",
     impact: "Prepares students for future careers.",
   },
   {
     icon: BookOpenCheck,
     title: "Multidisciplinary Learning",
-    contributes: "Demonstrates AI applications across healthcare, education, agriculture, business, and sustainability.",
+    contributes: "Demonstrates AI applications across healthcare, education, agriculture, business and sustainability.",
     impact: "Encourages holistic and cross-disciplinary thinking.",
   },
   {
     icon: Sparkles,
     title: "Innovation & Research",
     contributes: "Exposes students to emerging technologies and innovation challenges.",
-    impact: "Fosters curiosity, research aptitude, and entrepreneurship.",
+    impact: "Fosters curiosity, research aptitude and entrepreneurship.",
   },
   {
     icon: Brain,
     title: "Ethics & Responsible Citizenship",
-    contributes: "Covers AI ethics, privacy, bias, and responsible AI use.",
+    contributes: "Covers AI ethics, privacy, bias and responsible AI use.",
     impact: "Develops ethical and responsible digital citizens.",
   },
   {
@@ -78,13 +78,21 @@ export function HomeHighlights() {
           eyebrow="NEP 2020 Alignment"
           title={
             <>
-              How NAILO aligns with <span className="text-blue-700">NEP 2020</span>
+              {/* How NAILO aligns with <span className="text-blue-700">NEP 2020</span> */}
             </>
           }
-          description="Transforming NEP goals into practical AI literacy outcomes for students across India."
+          // description="Transforming NEP goals into practical AI literacy outcomes for students across India."
         />
 
-        <div className="mt-14 overflow-x-auto">
+        <div className="mt-2 flex justify-center">
+          <img
+            src="/images/NEP_Alignment.png"
+            alt="NEP 2020 alignment illustration"
+            className="w-full max-w-7xl rounded-[1.5rem] bg-white"
+          />
+        </div>
+
+        {/* <div className="mt-14 overflow-x-auto">
           <table className="w-full min-w-[700px] divide-y divide-slate-200 rounded-[1.5rem] border border-slate-200 bg-white shadow-sm">
             <thead>
               <tr>
@@ -123,7 +131,7 @@ export function HomeHighlights() {
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">Key Outcome</p>
                 <h6 className="mt-2 text-2xl sm:text-xl text-foreground">
-                  NAILO transforms NEP 2020's vision into action by equipping students with AI literacy, critical thinking, ethical awareness, innovation skills, and future workforce competencies essential for India's digital future.
+                  NAILO transforms NEP 2020's vision into action by equipping students with AI literacy, critical thinking, ethical awareness, innovation skills and future workforce competencies essential for India's digital future.
                 </h6>
               </div>
               <a
@@ -135,7 +143,8 @@ export function HomeHighlights() {
               </a>
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
+
       </div>
     </section>
   );

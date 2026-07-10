@@ -18,15 +18,15 @@ const faqs = [
   },
   {
     q: "How is the exam conducted?",
-    a: "The exam is conducted online through the NAILO platform, with secure proctoring and instant scoring.",
+    a: "The exam is conducted online through the NAILO platform, with secure proctoring.",
   },
   {
     q: "What are the rewards?",
-    a: "A 1,00,000 grand prize for the national topper, plus Gold, Silver and Bronze medals, digital certificates and national recognition through the NAILO Wall of Fame.",
+    a: "A ₹3,00,000+ grand prize pool for the national topper, plus Gold, Silver and Bronze medals, digital certificates and national recognition through the NAILO Wall of Fame.",
   },
   {
     q: "How do students register?",
-    a: "Click the Razorpay registration link, pay ₹399, and instantly unlock your dashboard, study resources and learning material.",
+    a: "Click the registration link, pay ₹399 and instantly unlock your dashboard, study resources and learning material.",
   },
 ];
 
@@ -39,7 +39,7 @@ export function FAQ() {
           eyebrow="FAQs"
           title={
             <>
-              Answers to the <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">big questions</span>
+              Answers to the <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Big Questions</span>
             </>
           }
           description="If something isn't here, reach out to our support team at support@nailolympiad.com — we're here to help!"

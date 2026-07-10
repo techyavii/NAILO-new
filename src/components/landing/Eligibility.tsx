@@ -1,7 +1,7 @@
 import { GraduationCap, Users, BookOpenCheck } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
 
-const boards = ["CBSE", "ICSE", "State Boards", "International Boards"];
+const boards = ["CBSE", "ICSE", "State Boards", "International Boards","Other Recognized Boards"];
 
 export function Eligibility() {
   return (
@@ -11,7 +11,7 @@ export function Eligibility() {
           eyebrow="Eligibility"
           title={
             <>
-              Who can <span className="text-blue-700">participate</span>
+              Who Can <span className="text-blue-700">Participate</span>
             </>
           }
           description="NAILO is open to every school student in India, across two age-appropriate divisions."

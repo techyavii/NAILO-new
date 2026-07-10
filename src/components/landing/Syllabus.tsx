@@ -112,7 +112,7 @@ export function Syllabus() {
           eyebrow="Syllabus"
           title={
             <>
-              A <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">comprehensive</span> AI literacy framework
+              A <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Comprehensive</span> AI-Literacy Framework
             </>
           }
           description="Designed by educators and AI practitioners. Built around four modules in every division."

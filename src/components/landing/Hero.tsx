@@ -33,7 +33,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#fcfeff_0%,#f7fbff_100%)] px-5 py-16 lg:px-8 lg:py-24"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#fcfeff_0%,#f7fbff_100%)] px-5 py-16 lg:px-8 lg:py-10"
     >
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
@@ -68,7 +68,7 @@ export function Hero() {
             Olympiad
           </span>
           <span className="block text-5xl sm:text-6xl mt-4">
-            NAILO 2026
+            NAILO 2026 - 2027
           </span>
         </motion.h1>
 
@@ -78,7 +78,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="mx-auto mt-6 inline-flex items-center justify-center gap-3 rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg sm:text-base"
         >
-          🎉 ₹3 Lakh+ Prize Pool | Win cash awards, trophies, and national recognition
+          🎉 ₹3 Lakh+ Prize Pool | Win cash awards, trophies and national recognition
         </motion.div>
 
         {/* Subtext */}
@@ -120,7 +120,6 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-2xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-sm transition hover:bg-blue-700"
           >
             🚀 Register Now ₹399
-            <ArrowRight className="w-5 h-5" />
           </a>
 
           <a

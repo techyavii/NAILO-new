@@ -3,8 +3,8 @@ import { Reveal, SectionHeader } from "./shared";
 
 const dates = [
   { label: "Registration Opens", value: "1 Aug 2026" },
-  { label: "Practice Resources Access", value: "Oct - Nov 2026" },
-  { label: "Registration Deadline", value: "Oct 2026" },
+  { label: "Practice Resources Access", value: "Sept 2026" },
+  { label: "Registration Deadline", value: "31 Oct 2026" },
   { label: "Exam Date", value: "20 Dec 2026" },
   { label: "Results Announced", value: "Feb 2027" },
   { label: "Awards & Recognition", value: "Mar 2027" },
@@ -27,7 +27,7 @@ export function ImportantDates() {
           eyebrow="Important dates"
           title={
             <>
-              Mark your <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">calendar</span>
+              Mark Your <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">Calendar</span>
             </>
           }
           description="A clear, predictable schedule from registration to recognition."

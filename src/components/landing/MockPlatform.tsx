@@ -122,7 +122,7 @@ export function MockPlatform() {
               {
                 icon: GraduationCap,
                 title: "AI Resource Hub",
-                desc: "Explore curated AI tools, beginner-friendly guides, practice material, and learning resources designed for students.",
+                desc: "Explore curated AI tools, beginner-friendly guides, practice material and learning resources designed for students.",
                 color: "from-purple-500 to-purple-600",
                 bg: "bg-purple-50"
               },

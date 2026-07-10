@@ -20,6 +20,7 @@ import { Footer } from "@/components/landing/Footer";
 import { HomeHighlights } from "@/components/landing/HomeHighlights";
 import { PartnerSchools } from "@/components/landing/PartnerSchools";
 import { PreparationResources } from "@/components/landing/PreparationResources";
+import AwardCTA from "@/components/landing/AwardCTA";
 
 function HomePage() {
   return (
@@ -27,6 +28,8 @@ function HomePage() {
       <Hero />
       <FeatureStrip />
       <StudentJourney />
+      <AwardCTA/>
+      <PreparationResources />
       <HomeHighlights />
       {/* <About /> */}
       <WhyParticipate />
@@ -37,7 +40,7 @@ function HomePage() {
       {/* <AdvisoryBoard /> */}
       <ImportantDates />
 
-      <PreparationResources />
+      
       {/* <Platform /> */}
       {/* <FAQ /> */}
       <FinalCTA />

@@ -17,7 +17,8 @@ const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Awards", href: "/awards" },
-  { label: "FAQs", href: "/faqs" },
+  { label: "Partner Schools", href: "/partner-schools" },
+
 ];
 const SyllabusLinks = [
   { label: "Syllabus", href: "/syllabus" },
@@ -25,8 +26,8 @@ const SyllabusLinks = [
 ];
 
 const moreLinks = [
-  { label: "Partner Schools", href: "/partner-schools" },
   { label: "Advisory Board", href: "/advisory-board" },
+  { label: "FAQs", href: "/faqs" },
 ];
 
 export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {

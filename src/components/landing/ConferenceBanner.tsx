@@ -30,7 +30,7 @@ const ConferenceBanner = () => {
           <h1 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">
             National AI Literacy Olympiad
           </h1>
-          <h2 className="text-xl md:text-2xl font-bold mb-2">NAILO 2026</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-2">NAILO 2026 - 2027</h2>
           <p className="text-sm md:text-base font-semibold mb-2">
             Organiser: AFI EduTech
           </p>

@@ -48,8 +48,8 @@ export function About() {
           eyebrow="About NAILO"
           title={
             <>
-              A national movement for{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">AI literacy</span>
+              A National Movement for{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">AI-Literacy</span>
             </>
           }
           description="NAILO is more than an exam. It's a structured pathway connecting Indian students to the language of tomorrow."

@@ -27,7 +27,7 @@ const blocks = [
   {
     icon: ListChecks,
     eyebrow: "Objectives",
-    title: "Measure, mentor, and motivate — at national scale",
+    title: "Measure, mentor and motivate — at national scale",
     body: "From identifying young talent to providing structured pathways for growth, NAILO connects schools, students and educators in a single high-quality assessment ecosystem.",
     points: [
       "Benchmark AI readiness across India",
