@@ -29,7 +29,7 @@ export function FinalCTA() {
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-10 py-5 text-lg font-semibold text-white shadow-sm transition hover:bg-blue-700"
                 >
-                  🚀 Register Now ₹399 <ArrowRight className="w-6 h-6" />
+                  🚀 Register Now ₹399
                 </a>
                 <a
                   href="#syllabus"
