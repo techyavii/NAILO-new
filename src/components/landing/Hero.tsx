@@ -7,6 +7,8 @@ import {
   CheckCircle2,
   Eye,
   School,
+  Trophy,
+  GraduationCap,
 } from "lucide-react";
 import ImageCarousel from "./ImageCarousel";
 
@@ -37,16 +39,84 @@ export function Hero() {
     >
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
-        {/* Top Badge */}
+        {/* Top Badge + floating highlight buttons on either side */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm mb-6"
+          transition={{ duration: 0.5 }}
+          className="relative flex justify-center mb-6"
         >
-          <Sparkles className="w-4 h-4" />
-          🇮🇳 India's First National AI Literacy Olympiad
+          {/* Floating: Prize Pool */}
+          <motion.a
+            href="#awards"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            className="hidden lg:flex absolute left-76 top-1/2 -translate-y-1/2 -translate-x-[calc(100%+1rem)] xl:-translate-x-[calc(100%+3rem)] z-20 items-center gap-3 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 pl-4 pr-5 py-3 shadow-xl shadow-amber-200/60 hover:scale-105 transition-transform"
+          >
+            <div className="w-10 h-10 rounded-xl bg-white/25 grid place-items-center flex-shrink-0">
+              <Trophy className="w-5 h-5 text-white" />
+            </div>
+            <div className="text-left">
+              
+              <p className="text-base font-extrabold text-white leading-tight"><span className="text-[11px] font-bold uppercase tracking-wide text-white/90 leading-none">
+                Prize Pool:
+              </span> ₹3 Lakh+</p>
+            </div>
+          </motion.a>
+
+          {/* Top Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm"
+          >
+            <Sparkles className="w-4 h-4" />
+            🇮🇳 India's First National AI Literacy Olympiad
+          </motion.div>
+
+          {/* Floating: AI Conclave */}
+          <motion.a
+            href="#awards"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+            className="hidden lg:flex absolute right-75 top-1/2 -translate-y-1/2 translate-x-[calc(100%+1rem)] xl:translate-x-[calc(100%+3rem)] z-20 items-center gap-3 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 pl-4 pr-5 py-3 shadow-xl shadow-blue-200/60 hover:scale-105 transition-transform"
+          >
+            <div className="w-10 h-10 rounded-xl bg-white/20 grid place-items-center flex-shrink-0">
+              <GraduationCap className="w-5 h-5 text-white" />
+            </div>
+            <div className="text-left">
+              <p className="text-[11px] font-bold uppercase tracking-wide text-white/90 leading-none">
+                Winners Get To
+              </p>
+              <p className="text-base font-extrabold text-white leading-tight mt-1">Attend AI Conclave</p>
+            </div>
+          </motion.a>
         </motion.div>
+
+        {/* Mobile-only versions of the floating highlights (stacked, since absolute positioning is hidden below lg) */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="flex lg:hidden justify-center gap-3 mb-6 flex-wrap"
+        >
+          <a
+            href="#awards"
+            className="flex items-center gap-2 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 pl-3 pr-4 py-2.5 shadow-lg shadow-amber-200/60"
+          >
+            <Trophy className="w-4 h-4 text-white" />
+            <span className="text-sm font-extrabold text-white">₹3 Lakh+ Prize Pool</span>
+          </a>
+          <a
+            href="#awards"
+            className="flex items-center gap-2 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 pl-3 pr-4 py-2.5 shadow-lg shadow-blue-200/60"
+          >
+            <GraduationCap className="w-4 h-4 text-white" />
+            <span className="text-sm font-extrabold text-white">Attend AI Conclave</span>
+          </a>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
