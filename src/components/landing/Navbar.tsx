@@ -168,7 +168,7 @@ export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all"
           >
-            🚀 Register Now ₹399
+            Register Now ₹399
           </a>
         </div>
 
