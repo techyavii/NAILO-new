@@ -29,7 +29,7 @@ const stats = [
   { label: "Schools targeted", value: 2000, suffix: "+" },
   { label: "Cities reached", value: 250, suffix: "+" },
   { label: "Students inspired", value: 100000, suffix: "+" },
-  { label: "AI literacy modules", value: 24, suffix: "" },
+  // { label: "AI literacy modules", value: 24, suffix: "" },
 ];
 
 export function About() {
