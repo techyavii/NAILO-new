@@ -90,48 +90,6 @@ const resources = [
   { icon: BadgeCheck, label: "Digital Certificates & Result Updates" },
 ];
 
-const faqs = [
-  {
-    q: "Who can become a NAILO Partner School?",
-    a: "Schools across India offering Classes VI-XII are welcome to partner with NAILO, irrespective of their education board, provided they share our vision of preparing students for an AI-driven future.",
-  },
-  {
-    q: "Is there a partnership fee?",
-    a: "No. There is no partnership fee for schools. Students participate by registering for the Olympiad through the prescribed registration process.",
-  },
-  {
-    q: "Is coding knowledge required for students?",
-    a: "No. NAILO focuses on AI literacy, computational thinking, logical reasoning, responsible AI and real-world applications. Prior coding knowledge is not required.",
-  },
-  {
-    q: "What is the role of the School Ambassador?",
-    a: "The School Ambassador acts as the primary point of contact between the school and NAILO, helping coordinate registrations, communication and Olympiad-related activities.",
-  },
-  {
-    q: "What resources are provided to students?",
-    a: "Registered students receive access to a personalized dashboard containing study material, the AI Basics e-Guide, practice questions, the Parent Handbook, examination updates and digital certificates.",
-  },
-  {
-    q: "How are schools recognized?",
-    a: "Partner Schools receive official recognition through certificates and opportunities for awards based on participation and performance. Outstanding principals, educators, school ambassadors and students are also recognized.",
-  },
-  {
-    q: "How are student performances evaluated?",
-    a: "Schools receive detailed performance reports with benchmarking at the school, state and national levels, helping educators understand learning outcomes and identify areas for improvement.",
-  },
-  {
-    q: "How can our school become a Partner School?",
-    a: "Schools can submit a partnership enquiry through our website or contact the NAILO Partnership Team. Our team will schedule a complimentary online interaction to explain the partnership model and answer any questions.",
-  },
-  {
-    q: "Who should we contact for partnership enquiries?",
-    a: "You can reach the NAILO Partnership Team through our official email or contact form. We would be happy to arrange an online presentation and guide your institution through the partnership process.",
-  },
-  {
-    q: "Why should our school partner with NAILO?",
-    a: "Partnering with NAILO helps you promote AI literacy aligned with NEP 2020, offer future-ready learning opportunities, gain national recognition, empower educators through the School Ambassador Program, and access performance analytics as part of a growing AI literacy ecosystem.",
-  },
-];
 
 function FaqItem({
   question,
@@ -390,7 +348,7 @@ export function PartnerSchools() {
         </Reveal>
 
         {/* FAQ */}
-        <div className="mt-16">
+        {/* <div className="mt-16">
           <Reveal>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">FAQ</p>
             <h3 className="mt-2 text-2xl font-bold text-foreground">Frequently Asked Questions</h3>
@@ -407,7 +365,7 @@ export function PartnerSchools() {
               </Reveal>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
