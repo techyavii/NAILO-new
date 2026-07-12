@@ -47,7 +47,7 @@ export function PreparationResources() {
                     <span className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">Win, Handed to You</span>
                   </>
                 }
-                description="No hidden costs, no separate purchases — five expert-curated resources land in your inbox the moment you register."
+                description="No hidden costs, no separate purchases — five expert-curated resources land in your personalized dashboard the moment you register."
               />
 
               {/* Bento-style resource grid instead of a flat list */}
@@ -106,7 +106,7 @@ export function PreparationResources() {
                   {/* corner ribbon */}
                   <div className="absolute -top-3 -right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white shadow-lg border border-green-200 text-green-600 text-xs font-extrabold">
                     <Sparkles className="w-3.5 h-3.5" />
-                    100% FREE
+                    EXTRA COST
                   </div>
 
                   <div className="space-y-5">

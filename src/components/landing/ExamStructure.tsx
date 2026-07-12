@@ -10,10 +10,10 @@ import { Reveal, SectionHeader } from "./shared";
 
 const steps = [
   { icon: ClipboardList, title: "Registration", desc: "Students sign up online with school details." },
-  { icon: Laptop2, title: "Practice Resources", desc: "Dedicated Study Material, Question Banks and AI Basics Guide on the NAILO platform." },
+  { icon: Laptop2, title: "Access to Resources", desc: "Dedicated Study Material, Question Banks and AI Basics Guide on the NAILO platform." },
   { icon: MonitorCheck, title: "Online Examination", desc: "Secure, proctored, AI-assisted." },
-  { icon: BarChart3, title: "Results", desc: "Detailed AI-powered performance report." },
-  { icon: PartyPopper, title: "Awards & Recognition", desc: "National recognition for top performers." },
+  { icon: BarChart3, title: "Results", desc: "Detailed performance report." },
+  { icon: PartyPopper, title: "Awards & Recognition", desc: "National recognition for top performers at AI Conclave 2027." },
 ];
 
 export function ExamStructure() {

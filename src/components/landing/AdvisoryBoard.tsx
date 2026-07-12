@@ -5,7 +5,7 @@ const members = [
   {
     name: "Manu Malek",
     affiliation: "Stevens Institute of Technology, USA",
-    image: "/advisory/manu_malek.jpg",
+    image: "/advisory/manu_malek.png",
   },
   {
     name: "Jon G. Hall",
@@ -15,7 +15,7 @@ const members = [
   {
     name: "Francesco Piccialli",
     affiliation: "University of Naples Federico II, Italy",
-    image: "/advisory/francesco_piccialli.jpeg",
+    image: "/advisory/francesco_piccialli.png",
   },
   {
     name: "Sarada Prasad Gochhayat",
@@ -27,11 +27,11 @@ const members = [
     affiliation: "University of South Florida, USA",
     image: "/advisory/bhuvan_unhelkar.jpeg",
   },
-  {
-    name: "Ajay Jaiswal",
-    affiliation: "School of Open Learning, University of Delhi",
-    image: "/advisory/ajay_jaiswal.jpg",
-  },
+  // {
+  //   name: "Ajay Jaiswal",
+  //   affiliation: "School of Open Learning, University of Delhi",
+  //   image: "/advisory/ajay_jaiswal.jpg",
+  // },
 ];
 
 export function AdvisoryBoard() {

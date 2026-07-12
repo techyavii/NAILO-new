@@ -49,7 +49,7 @@ export function Awards() {
   const seniorPrizes = [
   {
     rank: "National Topper (Rank 1)",
-    prize: "₹10,00,000+",
+    prize: "₹1,00,000+",
     awards: "National Winner's Trophy + Gold Medal",
   },
   {
@@ -108,9 +108,9 @@ export function Awards() {
     bg: "bg-violet-50",
   },
   {
-    title: "Outstanding Institutional Coordinator Award",
+    title: "Excellence in School Coordination Award",
     description:
-      "Honours coordinators who lead exceptional NAILO implementation within their schools.",
+      "Honours NAILO School Ambassadors who lead exceptional NAILO implementation within their schools.",
     icon: Users,
     color: "from-cyan-500 to-teal-600",
     bg: "bg-cyan-50",

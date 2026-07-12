@@ -176,6 +176,26 @@ export function Hero() {
           No coding required. Just logic, creativity & curiosity
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="mt-6 flex flex-wrap justify-center gap-3"
+        >
+          <div className="rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm">
+            <span className="block text-[11px] uppercase tracking-[0.2em] text-blue-700">
+              Registration Deadline
+            </span>
+            <span className="mt-1 block text-base text-slate-900">31 October 2026</span>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm">
+            <span className="block text-[11px] uppercase tracking-[0.2em] text-slate-500">
+              Examination Date
+            </span>
+            <span className="mt-1 block text-base text-slate-900">20 December 2026</span>
+          </div>
+        </motion.div>
+
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
