@@ -28,7 +28,7 @@ const story = [
 const stats = [
   { label: "Schools targeted", value: 2000, suffix: "+" },
   { label: "Cities reached", value: 250, suffix: "+" },
-  { label: "Students inspired", value: 100000, suffix: "+" },
+  { label: "Students inspired", value: 1000000, suffix: "+" },
   // { label: "AI literacy modules", value: 24, suffix: "" },
 ];
 
@@ -89,7 +89,7 @@ export function About() {
                     key={s.label}
                     className="rounded-3xl bg-gradient-to-br from-blue-50 to-green-50 border-2 border-blue-200 p-7 hover:shadow-lg transition-all"
                   >
-                    <div className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                    <div className="text-4xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
                       <Counter to={s.value} suffix={s.suffix} />
                     </div>
                     <div className="mt-3 text-sm lg:text-base font-bold text-foreground/80">

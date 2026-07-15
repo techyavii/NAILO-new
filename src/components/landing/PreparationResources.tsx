@@ -106,7 +106,7 @@ export function PreparationResources() {
                   {/* corner ribbon */}
                   <div className="absolute -top-3 -right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white shadow-lg border border-green-200 text-green-600 text-xs font-extrabold">
                     <Sparkles className="w-3.5 h-3.5" />
-                    EXTRA COST
+                    100% Free with Registration
                   </div>
 
                   <div className="space-y-5">

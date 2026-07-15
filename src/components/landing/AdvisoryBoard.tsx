@@ -36,7 +36,7 @@ const members = [
 
 export function AdvisoryBoard() {
   return (
-    <section id="advisory" className="relative py-16 px-5 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+    <section id="advisory" className="relative py-16 px-5 lg:px-8 bg-gradient-to-b from-white-50 to-white">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Advisory board"
@@ -63,7 +63,7 @@ export function AdvisoryBoard() {
                     <div className="text-sm text-foreground/70">{member.affiliation}</div>
                   </div>
                   <p className="text-sm text-foreground/80 leading-relaxed">
-                    A distinguished advisor shaping the academic integrity and global relevance of NAILO.
+                    Shaping the academic integrity and global relevance of NAILO.
                   </p>
                 </div>
               </div>
