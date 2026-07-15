@@ -157,12 +157,12 @@ export function PartnerSchools() {
             >
               Become a Partner School
             </a>
-            <a
+            {/* <a
               href="#"
               className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-6 py-3 text-sm font-semibold text-blue-700 transition hover:scale-105 hover:bg-blue-50"
             >
               Download Partner Schools Brochure
-            </a>
+            </a> */}
           </div>
         </Reveal>
 
