@@ -31,7 +31,12 @@ const members = [
   //   name: "Ajay Jaiswal",
   //   affiliation: "School of Open Learning, University of Delhi",
   //   image: "/advisory/ajay_jaiswal.jpg",
-  // },
+  // },,
+  {
+  name: "Akshi Kumar",
+  affiliation: "Goldsmiths, University of London, UK",
+  image: "/advisory/akshi.jpeg",
+},
 ];
 
 export function AdvisoryBoard() {
