@@ -155,13 +155,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="mx-auto mt-4 flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white/90 px-5 py-3 shadow-sm backdrop-blur"
+          className="mx-auto mt-4 flex max-w-fit items-center justify-center gap-3 rounded-full border border-slate-200 bg-white/95 px-4 py-2 shadow-sm backdrop-blur sm:px-5 sm:py-2.5"
         >
-          <span className="text-sm font-semibold text-slate-600">Academic Partner</span>
+          <span className="text-sm font-semibold tracking-wide text-slate-600">Academic Partner</span>
           <img
             src="/goldsmiths-logo.png"
             alt="Goldsmiths logo"
-            className="h-8 w-auto object-contain"
+            className="h-10 w-auto object-contain sm:h-12"
           />
         </motion.div>
 
