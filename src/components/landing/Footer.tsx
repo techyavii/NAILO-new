@@ -66,7 +66,7 @@ export function Footer({ onNavigate }: FooterProps) {
   };
 
   return (
-    <footer id="contact" className="relative bg-gradient-to-b from-white to-blue-50 border-t-2 border-blue-200">
+    <footer id="contact" className="relative border-t border-orange-400 bg-[#fae0c9]">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 py-16 lg:py-20">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-4">
@@ -153,7 +153,7 @@ export function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t-2 border-blue-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm">
+        <div className="mt-14 pt-8 border-t-2 border-blue-400 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm">
           <div className="text-foreground/70 font-medium">
             © {new Date().getFullYear()} NAILO · AFI EduTech. All rights reserved.
           </div>

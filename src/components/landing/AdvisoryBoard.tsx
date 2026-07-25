@@ -43,7 +43,45 @@ const members = [
 export function AdvisoryBoard() {
   return (
     <section id="advisory" className="relative py-16 px-5 lg:px-8 bg-gradient-to-b from-white-50 to-white">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto mb-6 max-w-7xl text-center">
+        <SectionHeader
+          title={
+            <>
+              Academic Advisor
+            </>
+          }
+        />
+
+        <Reveal>
+          <div className="mx-auto rounded-3xl max-w-2xl border mt-2 border-blue-200 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-7 shadow-sm">
+            <div className="flex flex-col items-center justify-center gap-6">
+              <img
+                src={academicAdvisor.image}
+                alt={academicAdvisor.name}
+                className="aspect-square w-full max-w-[220px] rounded-2xl object-cover shadow-md"
+              />
+
+              <div className="flex flex-col items-center">
+                <h3 className="text-2xl font-semibold text-slate-900">
+                  {academicAdvisor.name}
+                </h3>
+
+                <p className="mt-2 text-base font-medium text-blue-600">
+                  {academicAdvisor.affiliation}
+                </p>
+
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
+                  Providing strategic guidance on academic rigor, innovation, and
+                  global relevance for NAILO.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+      
+      
+      <div className="mx-auto max-w-7xl">  
         <SectionHeader
           eyebrow="Advisory board"
           title={
@@ -55,27 +93,6 @@ export function AdvisoryBoard() {
         />
 
         <div className="mt-14 space-y-8">
-          <Reveal>
-            <div className="rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50 via-white to-slate-50 p-7 shadow-sm">
-              <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
-                <img
-                  src={academicAdvisor.image}
-                  alt={academicAdvisor.name}
-                  className="w-full max-w-[220px] aspect-square object-cover rounded-2xl shadow-md"
-                />
-                <div className="flex-1">
-                  <div className="inline-flex items-center rounded-full bg-blue-600/10 px-3 py-1 text-sm font-semibold text-blue-700">
-                    Academic Advisor
-                  </div>
-                  <h3 className="mt-4 text-2xl font-semibold text-slate-900">{academicAdvisor.name}</h3>
-                  <p className="mt-2 text-base font-medium text-blue-600">{academicAdvisor.affiliation}</p>
-                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
-                    Providing strategic guidance on academic rigor, innovation, and global relevance for NAILO.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {members.map((member) => (

@@ -37,6 +37,29 @@ export function Hero() {
       id="home"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#fcfeff_0%,#f7fbff_100%)] px-5 py-16 lg:px-8 lg:py-20"
     >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
+        className="mx-auto -mt-10 mb-12 flex max-w-fit items-center gap-4 rounded-2xl border border-blue-100 bg-gradient-to-r from-white via-blue-50/60 to-orange-50/60 px-6 py-3 shadow-lg shadow-blue-100/30 backdrop-blur-md"
+      >
+        <div className="text-left">
+          <p className="text-lg font-semibold uppercase tracking-[0.25em] text-blue-600">
+            Academic Partner
+          </p>
+          <p className="mt-1 text-sm font-medium text-slate-600">
+            In Association with
+          </p>
+        </div>
+
+        <div className="h-10 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent" />
+
+        <img
+          src="/goldsmiths-logo.png"
+          alt="Goldsmiths University of London"
+          className="h-12 w-auto object-contain transition-transform duration-300 hover:scale-105 sm:h-14"
+        />
+      </motion.div>
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
         {/* Top Badge + floating highlight buttons on either side */}
@@ -151,19 +174,7 @@ export function Hero() {
           🎉 ₹3 Lakh+ Prize Pool | Win cash awards, trophies and national recognition
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="mx-auto mt-4 flex max-w-fit items-center justify-center gap-3 rounded-full border border-slate-200 bg-white/95 px-4 py-2 shadow-sm backdrop-blur sm:px-5 sm:py-2.5"
-        >
-          <span className="text-sm font-semibold tracking-wide text-slate-600">Academic Partner</span>
-          <img
-            src="/goldsmiths-logo.png"
-            alt="Goldsmiths logo"
-            className="h-10 w-auto object-contain sm:h-12"
-          />
-        </motion.div>
+        
 
         {/* Subtext */}
         <motion.p
