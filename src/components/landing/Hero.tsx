@@ -45,10 +45,7 @@ export function Hero() {
       >
         <div className="text-left">
           <p className="text-lg font-semibold uppercase tracking-[0.25em] text-blue-600">
-            Academic Partner
-          </p>
-          <p className="mt-1 text-sm font-medium text-slate-600">
-            In Association with
+            Academic Collaborator
           </p>
         </div>
 
