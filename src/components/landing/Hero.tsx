@@ -151,6 +151,20 @@ export function Hero() {
           🎉 ₹3 Lakh+ Prize Pool | Win cash awards, trophies and national recognition
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="mx-auto mt-4 flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white/90 px-5 py-3 shadow-sm backdrop-blur"
+        >
+          <span className="text-sm font-semibold text-slate-600">Academic Partner</span>
+          <img
+            src="/goldsmiths-logo.png"
+            alt="Goldsmiths logo"
+            className="h-8 w-auto object-contain"
+          />
+        </motion.div>
+
         {/* Subtext */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
