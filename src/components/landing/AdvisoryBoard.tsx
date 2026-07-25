@@ -44,7 +44,7 @@ export function AdvisoryBoard() {
     <section id="advisory" className="relative py-16 px-5 lg:px-8 bg-gradient-to-b from-white-50 to-white">
       <div className="mx-auto max-w-7xl">
         <SectionHeader
-          eyebrow="Advisory board"
+          eyebrow="Academic Advisor"
           title={
             <>
               Guided by global experts for a <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">world-class Olympiad</span>
