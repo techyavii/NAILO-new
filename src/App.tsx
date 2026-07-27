@@ -120,7 +120,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* <ConferenceBanner /> */}
       <Navbar currentPath={currentPath} onNavigate={navigateTo} />
-      <main>{page}</main>
+      <main className="pt-20 lg:pt-[120px]">{page}</main>
       <Footer onNavigate={navigateTo} />
     </div>
   );

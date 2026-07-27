@@ -55,11 +55,11 @@ export function Navbar({ onNavigate }: NavbarProps) {
           ? "bg-white/90 backdrop-blur-xl border-b border-slate-200 shadow-sm"
           : "bg-white"
       }`}>
-      <nav className="mx-auto max-w-7xl h-20 px-5 lg:px-8 flex items-center justify-between">
+      <nav className="mx-auto max-w-7xl px-5 lg:px-8 flex items-center justify-between">
         <a href="/" onClick={(e)=>{e.preventDefault();handleNavigate("/")}}>
           <img src="/NAILO_LOGO.png"
             alt="NAILO"
-            className="h-18 lg:h-24 w-auto object-contain" />
+            className="h-16 w-auto object-contain" />
         </a>
 
         <ul className="hidden text-l lg:flex items-center gap-2">
@@ -68,7 +68,7 @@ export function Navbar({ onNavigate }: NavbarProps) {
               <a
                 href={l.href}
                 onClick={(e)=>{e.preventDefault();handleNavigate(l.href)}}
-                className="px-4 py-2 font-semibold hover:text-blue-600"
+                className="px-4 font-semibold hover:text-blue-600"
               >
                 {l.label}
               </a>
@@ -109,7 +109,7 @@ export function Navbar({ onNavigate }: NavbarProps) {
       <div className="hidden lg:block border-t border-slate-200 bg-gradient-to-r from-blue-50 via-white to-orange-50">
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-12 px-6 py-3">
 
-          <div className="flex flex-col items-center">
+          <div className="flex gap-2 items-center">
             <span className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
               For Partner Schools
             </span>
@@ -126,7 +126,7 @@ export function Navbar({ onNavigate }: NavbarProps) {
 
           <div className="h-12 w-px bg-slate-300" />
 
-          <div className="flex flex-col items-center">
+          <div className="flex gap-2 items-center">
             <span className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
               For Individual Students
             </span>
