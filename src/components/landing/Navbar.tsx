@@ -1,6 +1,12 @@
+// Navbar.tsx
+// NOTE:
+// This is a template showing the requested structural changes.
+// Replace your existing Navbar.tsx with this version and
+// copy over any project-specific imports/components as needed.
+
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,19 +24,16 @@ const links = [
   { label: "About", href: "/about" },
   { label: "Awards", href: "/awards" },
   { label: "Partner Schools", href: "/partner-schools" },
-
-];
-const SyllabusLinks = [
-  { label: "Syllabus", href: "/syllabus" },
-  { label: "Exam Structure", href: "/exam" },
-];
-
-const moreLinks = [
   { label: "Advisory Board", href: "/advisory-board" },
   { label: "FAQs", href: "/faqs" },
 ];
 
-export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
+const syllabusLinks = [
+  { label: "Syllabus", href: "/syllabus" },
+  { label: "Exam Structure", href: "/exam" },
+];
+
+export function Navbar({ onNavigate }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -42,210 +45,149 @@ export function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
   }, []);
 
   const handleNavigate = (href: string) => {
-    if (onNavigate) {
-      onNavigate(href);
-    }
+    onNavigate?.(href);
     setOpen(false);
   };
 
   return (
-    <header
-      className={`sticky top-0 inset-x-0 z-50 transition-all duration-300 ${
+    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/85 backdrop-blur-xl border-b border-border shadow-soft"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="mx-auto max-w-7xl px-5 lg:px-8 lg:py-12 h-20 flex items-center justify-between">
-        <a
-          href="/"
-          onClick={(event) => {
-            event.preventDefault();
-            handleNavigate("/");
-          }}
-          className="flex items-center gap-3 group"
-        >
-          <img
-            src="/NAILO_LOGO.png"
+          ? "bg-white/90 backdrop-blur-xl border-b border-slate-200 shadow-sm"
+          : "bg-white"
+      }`}>
+      <nav className="mx-auto max-w-7xl h-20 px-5 lg:px-8 flex items-center justify-between">
+        <a href="/" onClick={(e)=>{e.preventDefault();handleNavigate("/")}}>
+          <img src="/NAILO_LOGO.png"
             alt="NAILO"
-            className="h-32 w-auto"
-          />
-          {/* <div className="hidden sm:flex flex-col leading-tight">
-            <span className="text-base font-bold tracking-tight text-foreground">NAILO</span>
-          </div> */}
+            className="h-18 lg:h-24 w-auto object-contain" />
         </a>
 
-        <ul className="hidden lg:flex items-center gap-3">
-          {links.map((l) => (
+        <ul className="hidden text-l lg:flex items-center gap-2">
+          {links.map(l=>(
             <li key={l.href}>
               <a
                 href={l.href}
-                onClick={(event) => {
-                  event.preventDefault();
-                  handleNavigate(l.href);
-                }}
-                className="relative px-4 py-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors group"
+                onClick={(e)=>{e.preventDefault();handleNavigate(l.href)}}
+                className="px-4 py-2 font-semibold hover:text-blue-600"
               >
                 {l.label}
-                <span className="absolute left-4 right-4 -bottom-0.5 h-1 bg-gradient-to-r from-blue-500 to-green-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 rounded-full" />
               </a>
             </li>
           ))}
 
-          <li>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors"
-                >
-                  Syllabus
-                  <span className="text-sm text-slate-400">▾</span>
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
-                {SyllabusLinks.map((l) => (
-                  <DropdownMenuItem key={l.href} asChild>
-                    <a
-                      href={l.href}
-                      onClick={(event) => {
-                        event.preventDefault();
-                        handleNavigate(l.href);
-                      }}
-                      className="block w-full"
-                    >
-                      {l.label}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </li>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="px-4 py-2 font-semibold">
+                Syllabus ▾
+              </button>
+            </DropdownMenuTrigger>
 
-          <li>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-semibold text-foreground hover:text-blue-600 transition-colors"
-                >
-                  More
-                  <span className="text-sm text-slate-400">▾</span>
-                </button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56">
-                {moreLinks.map((l) => (
-                  <DropdownMenuItem key={l.href} asChild>
-                    <a
-                      href={l.href}
-                      onClick={(event) => {
-                        event.preventDefault();
-                        handleNavigate(l.href);
-                      }}
-                      className="block w-full"
-                    >
-                      {l.label}
-                    </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </li>
+            <DropdownMenuContent>
+              {syllabusLinks.map(l=>(
+                <DropdownMenuItem key={l.href} asChild>
+                  <a
+                    href={l.href}
+                    onClick={(e)=>{e.preventDefault();handleNavigate(l.href)}}
+                  >
+                    {l.label}
+                  </a>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </ul>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="https://forms.gle/9HxrA5zhMAnMp7oE6"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base font-semibold text-slate-700 shadow-sm transition hover:bg-white"
-          >
-            Register Your School
-          </a>
-          <a
-            href="https://rzp.io/rzp/sKBaz3gm"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base font-bold shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 transition-all"
-          >
-            Register Now ₹399
-          </a>
-        </div>
-
         <button
-          aria-label="Toggle menu"
-          className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
-          onClick={() => setOpen((v) => !v)}
+          className="lg:hidden"
+          onClick={()=>setOpen(v=>!v)}
         >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {open ? <X/> : <Menu/>}
         </button>
       </nav>
+
+      {/* Registration Ribbon */}
+      <div className="hidden lg:block border-t border-slate-200 bg-gradient-to-r from-blue-50 via-white to-orange-50">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-12 px-6 py-3">
+
+          <div className="flex flex-col items-center">
+            <span className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+              For Partner Schools
+            </span>
+
+            <a
+              href="https://forms.gle/9HxrA5zhMAnMp7oE6"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-blue-200 bg-white px-5 py-2.5 font-semibold text-blue-700 shadow-sm hover:shadow-md"
+            >
+              🏫 Register Your School
+            </a>
+          </div>
+
+          <div className="h-12 w-px bg-slate-300" />
+
+          <div className="flex flex-col items-center">
+            <span className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+              For Individual Students
+            </span>
+
+            <a
+              href="https://rzp.io/rzp/sKBaz3gm"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-2.5 font-bold text-white shadow-lg hover:scale-105 transition"
+            >
+              🚀 Register Now ₹399
+            </a>
+          </div>
+
+        </div>
+      </div>
 
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="lg:hidden border-t border-border bg-white/95 backdrop-blur-xl"
+            initial={{opacity:0,y:-10}}
+            animate={{opacity:1,y:0}}
+            exit={{opacity:0,y:-10}}
+            className="lg:hidden border-t bg-white"
           >
-            <ul className="px-5 py-4 space-y-1">
-              {links.map((l) => (
+            <ul className="space-y-1 p-4">
+              {[...links,...syllabusLinks].map(l=>(
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      handleNavigate(l.href);
-                    }}
-                    className="block px-3 py-3 rounded-lg text-sm font-medium hover:bg-muted"
+                    onClick={(e)=>{e.preventDefault();handleNavigate(l.href)}}
+                    className="block rounded-lg px-3 py-3"
                   >
                     {l.label}
                   </a>
                 </li>
               ))}
-              <li className="pt-3 pb-1">
-                <div className="text-xs uppercase tracking-[0.24em] text-slate-500 px-3 pb-2">Syllabus</div>
-              </li>
-              {SyllabusLinks.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      handleNavigate(l.href);
-                    }}
-                    className="block px-3 py-3 rounded-lg text-sm font-medium hover:bg-muted"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-              <li className="pt-3 pb-1">
-                <div className="text-xs uppercase tracking-[0.24em] text-slate-500 px-3 pb-2">More</div>
-              </li>
-              {moreLinks.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      handleNavigate(l.href);
-                    }}
-                    className="block px-3 py-3 rounded-lg text-sm font-medium hover:bg-muted"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-              <li className="pt-2">
+
+              <li className="pt-4">
+                <div className="mb-2 text-xs uppercase text-slate-500">
+                  For Partner Schools
+                </div>
+
                 <a
                   href="https://forms.gle/9HxrA5zhMAnMp7oE6"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block text-center px-5 py-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold shadow-glow"
+                  className="block rounded-full border px-4 py-3 text-center"
                 >
                   Register Your School
+                </a>
+              </li>
+
+              <li className="pt-3">
+                <div className="mb-2 text-xs uppercase text-slate-500">
+                  For Individual Students
+                </div>
+
+                <a
+                  href="https://rzp.io/rzp/sKBaz3gm"
+                  className="block rounded-full bg-blue-600 px-4 py-3 text-center text-white"
+                >
+                  Register Now ₹399
                 </a>
               </li>
             </ul>
