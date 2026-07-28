@@ -27,9 +27,13 @@ const features = [
 
 export function Hero() {
   const carouselImages = [
-    { src: "/images/banner.png", alt: "University of Essex Campus" },
-    { src: "/images/banner2.jpeg", alt: "University of Essex Building" },
+    // { src: "/images/banner.png", alt: "University of Essex Campus" },
+
     { src: "/images/banner3.jpeg", alt: "University of Essex Entrance" },
+    { src: "/images/banner2.jpeg", alt: "University of Essex Building" },
+    { src: "/images/Sr_awardbanner.png", alt: "Sr. Awards"},
+    { src: "/images/Jr_awardbanner.png", alt: "Jr. Awards"},
+    { src: "/images/NEPbanner.png", alt: "NEP Allignment"},
     { src: "/images/banner4.jpeg", alt: "Aerial view of University of Essex" },
   ];
   return (
@@ -41,10 +45,10 @@ export function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15 }}
-        className="mx-auto -mt-10 mb-12 flex max-w-fit items-center gap-4 rounded-2xl border border-blue-100 bg-gradient-to-r from-white via-blue-50/60 to-orange-50/60 px-6 py-3 shadow-lg shadow-blue-100/30 backdrop-blur-md"
+        className="mx-auto -mt-10 mb-12 flex max-w-fit items-center gap-4 rounded-2xl border border-amber-300 bg-gradient-to-r from-amber-50 via-orange-50 to-blue-50 px-6 py-3 shadow-xl shadow-amber-200/40 backdrop-blur-md"
       >
         <div className="text-left">
-          <p className="text-lg font-semibold uppercase tracking-[0.25em] text-blue-600">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-600">
             Academic Collaborator
           </p>
         </div>
@@ -54,7 +58,7 @@ export function Hero() {
         <img
           src="/goldsmiths-logo.png"
           alt="Goldsmiths University of London"
-          className="h-12 w-auto object-contain transition-transform duration-300 hover:scale-105 sm:h-14"
+          className="h-18 w-auto object-contain transition-transform duration-300 hover:scale-105 sm:h-"
         />
       </motion.div>
 
