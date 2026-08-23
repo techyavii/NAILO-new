@@ -18,16 +18,27 @@ interface ImageCarouselProps {
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
 
   useEffect(() => {
-    if (!api) return;
+  if (!api) return;
 
-    const autoplayInterval = setInterval(() => {
-      api.scrollNext();
-    }, 5000);
+  const onSelect = () => {
+    setCurrent(api.selectedScrollSnap());
+  };
 
-    return () => clearInterval(autoplayInterval);
-  }, [api]);
+  onSelect();
+  api.on("select", onSelect);
+
+  const autoplayInterval = setInterval(() => {
+    api.scrollNext();
+  }, 5000);
+
+  return () => {
+    api.off("select", onSelect);
+    clearInterval(autoplayInterval);
+  };
+}, [api]);
 
   return (
     <div className="w-full py-8">
@@ -56,8 +67,20 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
             ))}
           </CarouselContent>
           <div className="flex justify-center mt-4">
-            <CarouselPrevious className="relative static mr-2" />
-            <CarouselNext className="relative static ml-2" />
+            <div className=" flex justify-center gap-2">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    current === index
+                      ? "w-8 bg-blue-600"
+                      : "w-2.5 bg-slate-300 hover:bg-slate-400"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </Carousel>
       </div>

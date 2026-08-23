@@ -49,7 +49,7 @@ export function Awards() {
   const seniorPrizes = [
   {
     rank: "National Topper (Rank 1)",
-    prize: "₹1,00,000+",
+    prize: "₹1,00,000",
     awards: "National Winner's Trophy + Gold Medal",
   },
   {

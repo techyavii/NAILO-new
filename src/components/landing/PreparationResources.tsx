@@ -2,11 +2,46 @@ import { Download, CheckCircle2, Sparkles, Gift } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
 
 const resources = [
-  { title: "Question Bank", icon: "📚", tint: "from-blue-500 to-blue-600" },
-  { title: "Olympiad Prep Guide", subtitle: "Full study material", icon: "📖", tint: "from-violet-500 to-violet-600" },
-  { title: "AI Basics e-Guide", icon: "🤖", tint: "from-emerald-500 to-emerald-600" },
-  { title: "Parent's Handbook", icon: "👨‍👩‍👧", tint: "from-amber-500 to-amber-600" },
-  { title: "School Ambassador Guide", subtitle: "For partner schools", icon: "🎓", tint: "from-pink-500 to-pink-600" },
+    {
+      title: "International Internship",
+      subtitle: "Top Performers Qualify for a Subsidized Internship at Goldsmiths, University of London (UK)",
+      icon: "🌍",
+      tint: "from-orange-500 to-orange-600"
+    },
+    { title: "Question Bank", icon: "📚", tint: "from-blue-500 to-blue-600" },
+
+    {
+      title: "Olympiad Prep Guide",
+      subtitle: "Full study material",
+      icon: "📖",
+      tint: "from-violet-500 to-violet-600"
+    },
+
+    { title: "AI Basics e-Guide", icon: "🤖", tint: "from-emerald-500 to-emerald-600" },
+
+    {
+      title: "Video Recorded Lectures",
+      subtitle: "Dashboard Access",
+      icon: "🎥",
+      tint: "from-cyan-500 to-cyan-600"
+    },
+
+    {
+      title: "Live AI Literacy Webinars",
+      subtitle: "Academic Expert-Led",
+      icon: "🎙️",
+      tint: "from-indigo-500 to-indigo-600"
+    },
+
+
+    { title: "Parent's Handbook", icon: "👨‍👩‍👧", tint: "from-amber-500 to-amber-600" },
+
+    {
+      title: "School Ambassador Guide",
+      subtitle: "For Partner Schools",
+      icon: "🎓",
+      tint: "from-pink-500 to-pink-600"
+    }
 ];
 
 export function PreparationResources() {

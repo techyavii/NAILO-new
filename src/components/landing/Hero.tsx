@@ -27,9 +27,13 @@ const features = [
 
 export function Hero() {
   const carouselImages = [
-    { src: "/images/banner.png", alt: "University of Essex Campus" },
-    { src: "/images/banner2.jpeg", alt: "University of Essex Building" },
+    // { src: "/images/banner.png", alt: "University of Essex Campus" },
+
     { src: "/images/banner3.jpeg", alt: "University of Essex Entrance" },
+    { src: "/images/banner2.jpeg", alt: "University of Essex Building" },
+    { src: "/images/Sr_awardbanner.png", alt: "Sr. Awards"},
+    { src: "/images/Jr_awardbanner.png", alt: "Jr. Awards"},
+    { src: "/images/NEPbanner.png", alt: "NEP Allignment"},
     { src: "/images/banner4.jpeg", alt: "Aerial view of University of Essex" },
   ];
   return (
@@ -37,6 +41,26 @@ export function Hero() {
       id="home"
       className="relative overflow-hidden bg-[linear-gradient(180deg,#fcfeff_0%,#f7fbff_100%)] px-5 py-16 lg:px-8 lg:py-20"
     >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
+        className="mx-auto -mt-10 mb-12 flex max-w-fit items-center gap-4 rounded-2xl border border-amber-300 bg-gradient-to-r from-amber-50 via-orange-50 to-blue-50 px-6 py-3 shadow-xl shadow-amber-200/40 backdrop-blur-md"
+      >
+        <div className="text-left">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-blue-600">
+            Academic Collaborator
+          </p>
+        </div>
+
+        <div className="h-10 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent" />
+
+        <img
+          src="/goldsmiths-logo.png"
+          alt="Goldsmiths University of London"
+          className="h-18 w-auto object-contain transition-transform duration-300 hover:scale-105 sm:h-"
+        />
+      </motion.div>
 
       <div className="relative mx-auto max-w-5xl px-5 lg:px-8 text-center">
         {/* Top Badge + floating highlight buttons on either side */}
@@ -151,19 +175,7 @@ export function Hero() {
           🎉 ₹3 Lakh+ Prize Pool | Win cash awards, trophies and national recognition
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="mx-auto mt-4 flex max-w-fit items-center justify-center gap-3 rounded-full border border-slate-200 bg-white/95 px-4 py-2 shadow-sm backdrop-blur sm:px-5 sm:py-2.5"
-        >
-          <span className="text-sm font-semibold tracking-wide text-slate-600">Academic Partner</span>
-          <img
-            src="/goldsmiths-logo.png"
-            alt="Goldsmiths logo"
-            className="h-10 w-auto object-contain sm:h-12"
-          />
-        </motion.div>
+        
 
         {/* Subtext */}
         <motion.p
