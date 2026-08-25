@@ -159,7 +159,7 @@ export function Navbar({ onNavigate }: NavbarProps) {
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
               </span>
 
-              <span className="relative">Exam Portal</span>
+              <span className="relative">Student Login</span>
             </a>
           </li>
         </ul>
@@ -288,7 +288,7 @@ export function Navbar({ onNavigate }: NavbarProps) {
                     rel="noreferrer"
                     className="flex items-center justify-center gap-2 rounded-xl border-2 border-slate-800 bg-slate-700 px-4 py-3.5 text-center font-bold text-white shadow-md transition-all duration-200 hover:border-blue-700 hover:bg-blue-700"
                   >
-                    <span>Exam Portal</span>
+                    <span>Student Login</span>
                   </a>
                 </li>
 
