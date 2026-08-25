@@ -90,6 +90,23 @@ const resources = [
   { icon: BadgeCheck, label: "Digital Certificates & Result Updates" },
 ];
 
+const partnerSchools = [
+  {
+    name: 'Happy English School, Sharad Vihar',
+    shortName: 'Happy English School',
+    logo: '/NAILO-partners/HES_School.svg',
+    website: 'https://www.hes.edu.in/',
+    websiteLabel: 'Welcome to HES',
+  },
+  {
+    name: 'Bharat National Public School',
+    shortName: 'Bharat National Public School',
+    logo: '/NAILO-partners/BNPC_school.png',
+    website: 'https://bnpsramvihar.edu.in/',
+    websiteLabel: 'Visit BNPS website',
+  },
+];
+
 
 function FaqItem({
   question,
@@ -165,6 +182,47 @@ export function PartnerSchools() {
             </a> */}
           </div>
         </Reveal>
+
+            {/* Partner schools */}
+            <div className="mt-14">
+              <Reveal>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">
+                  NAILO Partner School Network
+                </p>
+                <h3 className="mt-2 text-2xl font-bold text-foreground">Schools shaping the future together</h3>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-foreground/70">
+                  Meet the schools joining NAILO to help students become AI-literate, future-ready,
+                  and innovation-driven learners.
+                </p>
+              </Reveal>
+              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+                {partnerSchools.map(({ name, shortName, logo, website, websiteLabel }, index) => (
+                  <Reveal key={name} delay={index * 0.08}>
+                    <article className="flex h-full flex-col rounded-[2rem] border border-blue-200 bg-white/80 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                      <div className="flex min-h-36 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-50 to-green-50 p-5">
+                        <img
+                          src={logo}
+                          alt={`${shortName} logo`}
+                          className="max-h-24 max-w-full object-contain"
+                        />
+                      </div>
+                      <div className="mt-5 flex flex-1 flex-col">
+                        <h4 className="text-lg font-bold text-foreground">{name}</h4>
+                        <a
+                          href={website}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-4 inline-flex items-center text-sm font-semibold text-blue-700 transition hover:text-green-700"
+                        >
+                          {websiteLabel}
+                          <span aria-hidden="true" className="ml-2">&rarr;</span>
+                        </a>
+                      </div>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
 
         {/* Why partner */}
         <div className="mt-16">
