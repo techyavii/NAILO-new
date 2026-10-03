@@ -21,6 +21,7 @@ import { HomeHighlights } from "@/components/landing/HomeHighlights";
 import { PartnerSchools } from "@/components/landing/PartnerSchools";
 import { PreparationResources } from "@/components/landing/PreparationResources";
 import AwardCTA from "@/components/landing/AwardCTA";
+import { PartnerSponsors } from "@/components/landing/PartnerSponsors";
 
 function HomePage() {
   return (
@@ -43,6 +44,7 @@ function HomePage() {
       
       {/* <Platform /> */}
       {/* <FAQ /> */}
+      <PartnerSponsors />
       <FinalCTA />
     </>
   );
