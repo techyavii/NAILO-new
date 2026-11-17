@@ -100,7 +100,7 @@ export function Hero() {
           </motion.div>
 
           {/* Floating: AI Conclave */}
-          <motion.a
+          {/* <motion.a
             href="#awards"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
@@ -115,7 +115,7 @@ export function Hero() {
               </p>
               <p className="text-base font-extrabold text-white leading-tight mt-1">Attend AI Conclave</p>
             </div>
-          </motion.a>
+          </motion.a> */}
         </motion.div>
 
         {/* Mobile-only versions of the floating highlights (stacked, since absolute positioning is hidden below lg) */}
@@ -132,13 +132,13 @@ export function Hero() {
             <Trophy className="w-4 h-4 text-white" />
             <span className="text-sm font-extrabold text-white">₹3 Lakh+ Prize Pool</span>
           </a>
-          <a
+          {/* <a
             href="#awards"
             className="flex items-center gap-2 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 pl-3 pr-4 py-2.5 shadow-lg shadow-blue-200/60"
           >
             <GraduationCap className="w-4 h-4 text-white" />
             <span className="text-sm font-extrabold text-white">Attend AI Conclave</span>
-          </a>
+          </a> */}
         </motion.div>
 
         <motion.div

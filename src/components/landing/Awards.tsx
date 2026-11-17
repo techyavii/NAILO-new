@@ -22,23 +22,23 @@ export function Awards() {
   const juniorPrizes = [
   {
     rank: "National Topper (Rank 1)",
-    prize: "₹30,000",
+    prize: "₹31,000",
     awards: "National Winner's Trophy + Gold Medal",
   },
   {
     rank: "Rank 2",
-    prize: "₹20,000",
+    prize: "₹21,000",
     awards: "Silver Medal",
   },
   {
     rank: "Rank 3",
-    prize: "₹10,000",
+    prize: "₹11,000",
     awards: "Bronze Medal",
   },
   {
     rank: "Rank 4-10",
-    prize: "₹3,000",
-    awards: "Merit & Appreciation Certificate",
+    prize: "-",
+    awards: "Medal & Appreciation Certificate",
   },
   {
     rank: "Top 10%",
@@ -49,23 +49,23 @@ export function Awards() {
   const seniorPrizes = [
   {
     rank: "National Topper (Rank 1)",
-    prize: "₹1,00,000",
+    prize: "₹31,000",
     awards: "National Winner's Trophy + Gold Medal",
   },
   {
     rank: "Rank 2",
-    prize: "₹50,000",
+    prize: "₹21,000",
     awards: "Silver Medal",
   },
   {
     rank: "Rank 3",
-    prize: "₹25,000",
+    prize: "₹11,000",
     awards: "Bronze Medal",
   },
   {
     rank: "Rank 4-10",
-    prize: "₹5,000",
-    awards: "Merit & Appreciation Certificate",
+    prize: "-",
+    awards: "Medal & Appreciation Certificate",
   },
   {
     rank: "Top 10%",
@@ -394,7 +394,7 @@ export function Awards() {
         </Reveal>
 
         {/* Why Attend the AI Conclave 2027 */}
-        <Reveal delay={0.1}>
+        {/* <Reveal delay={0.1}>
           <div className="mt-14">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-sm font-semibold text-amber-900 mb-6">
               <Sparkles className="w-4 h-4" /> Why Attend the AI Conclave 2027
@@ -418,7 +418,7 @@ export function Awards() {
               })}
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
 
         {/* Closing tagline */}
         <Reveal delay={0.15}>
