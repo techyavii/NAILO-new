@@ -29,7 +29,7 @@ function HomePage() {
       <Hero />
       <FeatureStrip />
       <StudentJourney />
-      <AwardCTA/>
+      {/* <AwardCTA/> */}
       <PreparationResources />
       <HomeHighlights />
       {/* <About /> */}

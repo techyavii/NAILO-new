@@ -37,7 +37,7 @@ export function Awards() {
   },
   {
     rank: "Rank 4-10",
-    prize: "-",
+    prize: "—",
     awards: "Medal & Appreciation Certificate",
   },
   {
@@ -64,7 +64,7 @@ export function Awards() {
   },
   {
     rank: "Rank 4-10",
-    prize: "-",
+    prize: "—",
     awards: "Medal & Appreciation Certificate",
   },
   {
@@ -188,7 +188,7 @@ export function Awards() {
         />
 
         {/* AI Conclave 2027 — Ceremony Banner */}
-        <Reveal delay={0.05}>
+        {/* <Reveal delay={0.05}>
           <div className="mt-10 relative rounded-3xl overflow-hidden bg-gradient-to-br from-amber-50 via-white to-blue-50 border border-amber-200 p-8 lg:p-10 shadow-soft">
             <div className="relative grid lg:grid-cols-[1.4fr_0.6fr] gap-8 items-center">
               <div>
@@ -207,7 +207,6 @@ export function Awards() {
                   literacy and future-ready education.
                 </p>
 
-                {/* Event detail chips */}
                 <div className="flex flex-wrap gap-3 mt-6">
                   <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-border shadow-soft">
                     <CalendarDays className="w-4 h-4 text-amber-600" />
@@ -224,7 +223,6 @@ export function Awards() {
                 </div>
               </div>
 
-              {/* Trophy visual */}
               <div className="hidden lg:flex justify-center">
                 <div className="relative w-40 h-40 rounded-full bg-gradient-to-br from-amber-100 to-yellow-100 border border-amber-200 grid place-items-center">
                   <Trophy className="w-20 h-20 text-amber-500" />
@@ -232,7 +230,7 @@ export function Awards() {
               </div>
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
 
         {/* Who Will Be Honoured — quick recap */}
         <Reveal delay={0.1}>

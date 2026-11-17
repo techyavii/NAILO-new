@@ -2,12 +2,12 @@ import { Calendar } from "lucide-react";
 import { Reveal, SectionHeader } from "./shared";
 
 const dates = [
-  { label: "Registration Opens", value: "1 Aug 2026" },
-  { label: "Practice Resources Access", value: "Sept 2026" },
-  { label: "Registration Deadline", value: "31 Oct 2026" },
-  { label: "Exam Date", value: "20 Dec 2026" },
-  { label: "Results Announced", value: "Feb 2027" },
-  { label: "Awards & Recognition", value: "Mar 2027" },
+  { label: "Registration Opens", value: "1 April 2027" },
+  { label: "Practice Resources Access", value: "On Registration" },
+  { label: "Registration Deadline", value: "30 Aug 2027" },
+  { label: "Exam Date", value: "21 Nov 2027" },
+  { label: "Results Announced", value: "20 Dec 2027" },
+  // { label: "Awards & Recognition", value: "Mar 2027" },
 ];
 
 export function ImportantDates() {
@@ -17,7 +17,7 @@ export function ImportantDates() {
     { bg: "bg-white", border: "border-slate-200", icon: "bg-slate-700" },
     { bg: "bg-white", border: "border-slate-200", icon: "bg-amber-500" },
     { bg: "bg-white", border: "border-slate-200", icon: "bg-blue-500" },
-    { bg: "bg-white", border: "border-slate-200", icon: "bg-slate-600" },
+    // { bg: "bg-white", border: "border-slate-200", icon: "bg-slate-600" },
   ];
 
   return (

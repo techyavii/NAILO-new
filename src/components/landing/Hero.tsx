@@ -212,13 +212,13 @@ export function Hero() {
             <span className="block text-[11px] uppercase tracking-[0.2em] text-blue-700">
               Registration Deadline
             </span>
-            <span className="mt-1 block text-base text-slate-900">31 October 2026</span>
+            <span className="mt-1 block text-base text-slate-900">30 August 2027</span>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm">
             <span className="block text-[11px] uppercase tracking-[0.2em] text-slate-500">
               Examination Date
             </span>
-            <span className="mt-1 block text-base text-slate-900">20 December 2026</span>
+            <span className="mt-1 block text-base text-slate-900">21 November 2027</span>
           </div>
         </motion.div>
 
