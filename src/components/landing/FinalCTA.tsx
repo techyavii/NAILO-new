@@ -39,7 +39,7 @@ export function FinalCTA() {
                 </a>
               </div>
               <p className="mt-10 text-sm font-medium text-slate-500">
-                ⏰ Exam Date: 21 Novemver 2027 | 🏆 Total Prize Pool: 3+ Lakhs
+                ⏰ Exam Date: 21 November 2027 | 🏆 Total Prize Pool: 3+ Lakhs
               </p>
             </div>
           </div>
