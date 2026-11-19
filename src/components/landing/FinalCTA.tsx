@@ -12,9 +12,9 @@ export function FinalCTA() {
             <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:32px_32px]" />
 
             <div className="relative max-w-4xl mx-auto">
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-5 py-2 text-base font-semibold text-slate-700">
+              {/* <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-5 py-2 text-base font-semibold text-slate-700">
                 <Sparkles className="w-5 h-5" /> 🎉 Registrations LIVE for 2026
-              </div>
+              </div> */}
               <h2 className="mb-6 text-4xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
                 Ready to become India's next AI Explorer?
               </h2>
@@ -39,7 +39,7 @@ export function FinalCTA() {
                 </a>
               </div>
               <p className="mt-10 text-sm font-medium text-slate-500">
-                ⏰ Exam Date: 20 December 2026 | 🏆 Total Prize Pool: 3+ Lakhs
+                ⏰ Exam Date: 21 Novemver 2027 | 🏆 Total Prize Pool: 3+ Lakhs
               </p>
             </div>
           </div>
